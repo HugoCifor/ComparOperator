@@ -13,12 +13,14 @@ class TourOperator
 
     function __construct($data)
     {
-
+        $this->db = new DataBase("comparoperator");
     }
 
 }
 
-// getId();
+function getId(){
+    return $id;
+}
 // getName();
 // getLink();
 // getGradeCount();
