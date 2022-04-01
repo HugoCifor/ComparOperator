@@ -52,14 +52,19 @@ include './config/autoload.php';
         </div>
     </div>
 </header>
-    <div class="wrapper">
-        <div class="wrapperLondre">Londres</div>
-        <div class="wrapperRome">Rome</div>
-        <div class="wrapperMonaco">Monaco</div>
-        <div class="wrapperTunis">Tunis</div>
-    </div>
+
+<?php $data = 'oui'; // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    $classe = new Manager($data);
+    $info = $classe ->getDestinationNames();
+    ?>
+    <ul><?php
+        foreach ($info as $key => $value) {
+            echo "<li class='deroulant ".$value."'onclick='names(this)'>".$value."</li>";
+        }
+    ?>
+    </ul>
     
 <script src="/JS/main.js"></script>=======
 </body>
-<script src="./js/test.js"></script>
+<script src="./js/test.js"></script> 
 </html>
