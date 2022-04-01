@@ -10,8 +10,8 @@ abstract class Destination
 
     function __construct($data)
     {
-    //     $this->hydrate($data);
-     }
+        $this->hydrate($data);
+    }
 
     // private function hydrate($data)
     // {
@@ -30,10 +30,29 @@ abstract class Destination
             
     //     );
     // }
+
+    function getId()
+    {
+
+    }
+
+
+    function getLocation()
+    {
+
+    }
+
+
+    function getPrice()
+    {
+
+    }
+
+    
+    function getTourOperatorId()
+    {
+
+    }
     
 }
 
-// getId();
-// getLocation();
-// getPrice();
-// getTourOperatorId();
