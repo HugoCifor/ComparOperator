@@ -16,7 +16,44 @@ class TourOperator
         $this->db = new DataBase("comparoperator");
     }
 
+    function getId()
+    {
+
+    }
+
+    function getName()
+    {
+
+    }
+
+    function getLink()
+    {
+
+    }
+
+    function getGradeCount()
+    {
+
+    }
+
+    function getGradeTotal()
+    {
+
+    }
+
+    function getGrade()
+    {
+
+    }
+
+    function getPremium()
+    {
+
+    }
+
+
 }
+
 
 function getId(){
     return $id;
@@ -27,3 +64,4 @@ function getId(){
 // getGradeTotal();
 // getGrade();
 // getPremium();
+
