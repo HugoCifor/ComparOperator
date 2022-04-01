@@ -58,28 +58,8 @@ class Destination
 
     }
 
-    function getAllFromDestination()
-    {
-        $req=$this->db->getPDO()->prepare('SELECT * FROM destination');
-        $req->execute([]);
-        $AllDest=$req->fetchAll();
-        return $AllDest;
-    }
 
-    function getDestinationNames()
-    {
-        $allNames=[];
-        $AllDest= $this->getAllFromDestination();
-        foreach ($AllDest as $key => $value) {
-            foreach ($value as $names => $nom) {
-               if ($names==='location')
-                array_push($allNames,$nom);
-            }
-            
-            
-        }
-        return $allNames;
-    }
+    
     
 }
 

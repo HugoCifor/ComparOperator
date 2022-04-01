@@ -20,11 +20,12 @@ include './config/autoload.php';
     ?>
     <ul><?php
         foreach ($info as $key => $value) {
-            echo "<li>".$value."</li>";
+            echo "<li class='deroulant ".$value."'onclick='names(this)'>".$value."</li>";
         }
     ?>
     </ul>
 
 
 </body>
+<script src="./js/test.js"></script>
 </html>
