@@ -60,20 +60,6 @@ include './config/autoload.php';
     </div>
     
 <script src="/JS/main.js"></script>=======
-  <h1>welcome to the comparOperator</h1>
-    <?php $data = 'oui'; // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    $classe = new Destination($data);
-    $info = $classe ->getDestinationNames();
-    ?>
-    <ul><?php
-        foreach ($info as $key => $value) {
-            echo "<li class='deroulant ".$value."'onclick='names(this)'>".$value."</li>";
-        }
-    ?>
-    </ul>
-
-
-
 </body>
 <script src="./js/test.js"></script>
 </html>
