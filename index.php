@@ -27,7 +27,23 @@ include './config/autoload.php';
 <header>
  
 </header>
+
+
+<?php $data = 'oui'; 
+    $classe = new Manager($data);
+    $info = $classe ->getDestinationNames();
+    ?>
+    <ul><?php
+        foreach ($info as $key => $value) {
+            echo "<li class='deroulant ".$value."'onclick='names(this)'>".$value."</li>";
+        }
+    ?>
+    </ul>
+
     
 <script src="./JS/main.js"></script>
 </body>
+
+<script src="./js/test.js"></script> 
+
 </html>
