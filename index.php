@@ -14,7 +14,7 @@ include './config/autoload.php';
 </head>
 <body>
     <h1>welcome to the comparOperator</h1>
-    <?php $data = 'oui'; // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    <?php $data = 'oui'; // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     $classe = new Destination($data);
     $info = $classe ->getDestinationNames();
     ?>
