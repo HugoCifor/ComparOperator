@@ -12,7 +12,6 @@ class Destination
     {
         $this->db = new DataBase("comparoperator");
 
-        // $this->hydrate($data);
     }
 
     // private function hydrate($data)

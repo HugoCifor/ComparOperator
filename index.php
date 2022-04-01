@@ -25,41 +25,9 @@ include './config/autoload.php';
                 </ul>
         </nav>
 <header>
-        
-    <div id="sliderSettings">
-        <div id="pSlider" class="pSlider">
-            <ol id="slider-container" dir="ltr">
-                <li id="slide_1" class="li_slide">
-                    <div class="slide-snapper"></div>
-                    <a class="prev_slide" href="#slide_4" src=""></a> 
-                    <a class="next_slide" href="#slide_2" src=""></a> 
-                </li>
-                <li id="slide_2" class="li_slide">
-                    <div class="slide-snapper"></div>
-                    <a class="prev_slide" href="#slide_1"></a> 
-                    <a class="next_slide" href="#slide_3" ></a> 
-                </li>
-                <li id="slide_3" class="li_slide">
-                    <div class="slide-snapper"></div>
-                    <a class="prev_slide" href="#slide_2"></a> 
-                    <a class="next_slide" href="#slide_4"></a> 
-                </li>
-                <li id="slide_4" class="li_slide">
-                    <div  class="slide-snapper"></div>
-                    <a class="prev_slide" href="#slide_3"></a>
-                    <a class="next_slide" href="#slide_1"></a> </li>
-            </ol>
-        </div>
-    </div>
+ 
 </header>
-    <div class="wrapper">
-        <div class="wrapperLondre">Londres</div>
-        <div class="wrapperRome">Rome</div>
-        <div class="wrapperMonaco">Monaco</div>
-        <div class="wrapperTunis">Tunis</div>
-    </div>
     
-<script src="/JS/main.js"></script>=======
+<script src="./JS/main.js"></script>
 </body>
-<script src="./js/test.js"></script>
 </html>
