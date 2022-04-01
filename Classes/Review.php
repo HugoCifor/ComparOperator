@@ -13,10 +13,25 @@ Class Review
 
     }
 
+    function getId()
+    {
 
+    }
+    
+    function getMessage()
+    {
+
+    }
+    
+    function getAuthor()
+    {
+
+    }
+    
+    function getTourOperatorId()
+    {
+
+    }
+
+    
 }
-
-// getId();
-// getMessage();
-// getAuthor();
-// getTourOperatorId();
