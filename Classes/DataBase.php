@@ -8,7 +8,7 @@
 
 
 class DataBase{
-    private $db_name;
+    private $db_name;  
     private $db_user;
     private $db_password;
     private $db_host;

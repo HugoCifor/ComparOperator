@@ -6,7 +6,7 @@ Class Review
     private $message;
     private $author;
     private $tourOperatorId;
-
+ 
 
     function __construct($data)
     {

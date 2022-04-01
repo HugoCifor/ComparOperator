@@ -8,7 +8,7 @@ class TourOperator
     private $link;
     private $gradeCount;
     private $gradeTotal;
-    private $isPremium;
+    private $isPremium; 
 
 
     function __construct($data)
