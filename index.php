@@ -1,5 +1,7 @@
 <?php
 include "./config/bdd.php";
+include './config/autoload.php';
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,5 +13,14 @@ include "./config/bdd.php";
 </head>
 <body>
     <h1>welcome to the comparOperator</h1>
+    <?php $data = 'oui';
+    $classe = new Destination($data);
+    $info = $classe ->getDestinationNames();
+
+foreach ($info as $key => $value) {
+    echo $value."</br>";
+}
+?>
+
 </body>
 </html>
