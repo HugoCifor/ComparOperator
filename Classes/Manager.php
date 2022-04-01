@@ -15,7 +15,7 @@ class Manager
     {
         $req=$this->db->getPDO()->prepare('SELECT * FROM destination');
         $req->execute([]);
-        $AllDest=$req->fetchAll();
+        $AllDest=$req->fetchAll(); 
         return $AllDest;
     }
 

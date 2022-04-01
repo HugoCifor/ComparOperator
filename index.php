@@ -61,5 +61,5 @@ include './config/autoload.php';
     
 <script src="/JS/main.js"></script>=======
 </body>
-<script src="./js/test.js"></script>
+<script src="./js/test.js"></script> 
 </html>
