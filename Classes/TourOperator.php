@@ -16,12 +16,56 @@ class TourOperator
         
     }
 
+    function getId()
+    {
+
+    }
+
+    function getName()
+    {
+
+    }
+
+    function getLink()
+    {
+
+    }
+
+    function getGradeCount()
+    {
+
+    }
+
+    function getGradeTotal()
+    {
+
+    }
+
+    function getGrade()
+    {
+
+    }
+
+    function getPremium()
+    {
+
+    }
+
+
 }
 
-// getId();
-// getName();
-// getLink();
-// getGradeCount();
-// getGradeTotal();
-// getGrade();
-// getPremium();
+// <<<<<<< HEAD
+// // getId();
+// =======
+
+// function getId(){
+//     return $id;
+// }
+// >>>>>>> 03ecb5ccae179f28d194c919237148dd11a44f67
+// // getName();
+// // getLink();
+// // getGradeCount();
+// // getGradeTotal();
+// // getGrade();
+// // getPremium();
+

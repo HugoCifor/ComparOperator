@@ -1,6 +1,6 @@
 <?php
 
-abstract class Destination
+class Destination
 {
     private $id;
     private $location;
@@ -10,7 +10,9 @@ abstract class Destination
 
     function __construct($data)
     {
-        $this->hydrate($data);
+        $this->db = new DataBase("comparoperator");
+
+        // $this->hydrate($data);
     }
 
     // private function hydrate($data)
@@ -33,26 +35,31 @@ abstract class Destination
 
     function getId()
     {
-
+        return $this->id;
     }
 
 
     function getLocation()
     {
-
+        return $this->location;
     }
 
 
     function getPrice()
     {
+        return $this->price;
 
     }
 
-    
+
     function getTourOperatorId()
     {
+        return $this->tourOperatorId;
 
     }
+
+
+    
     
 }
 
