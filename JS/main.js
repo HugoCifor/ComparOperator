@@ -1,3 +1,9 @@
+
+
+function names(e)
+{
+    console.log(e.classList[1]);
+
 // carousel
 let widthInput = document.getElementById("slider-width");
 
@@ -78,4 +84,5 @@ window.onload = () => {
             }
         }
     }
+
 }

@@ -15,6 +15,22 @@ include './config/autoload.php';
     <title>comparOperator</title>
 </head>
 <body>
+
+
+<nav id="navbar"class="flex flex-row items-center"style="background-image: url(https://sacavoyage.fr/wp-content/uploads/AAAAAAA.jpg);">
+            <span class=" ">HS Company</span>
+                <ul class="flex flex-row text-white font-normal text-lg">
+                    
+                    
+                </ul>
+        </nav>
+<header>
+ 
+</header>
+
+
+<?php $data = 'oui'; 
+
     <img id="logo1"src="./images/logo3.png" alt="">
 <header id="header">  
     <img id="logo2"src="./images/logo2.png" alt="">
@@ -64,6 +80,7 @@ include './config/autoload.php';
         </div>
     </div>
     <!-- <?php $data = 'oui'; // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
     $classe = new Manager($data);
     $info = $classe ->getDestinationNames();
     ?>
@@ -71,6 +88,17 @@ include './config/autoload.php';
         foreach ($info as $key => $value) {
             echo "<li class='deroulant ".$value."'onclick='names(this)'>".$value."</li>";
         }
+
+    ?>
+    </ul>
+
+    
+<script src="./JS/main.js"></script>
+</body>
+
+<script src="./js/test.js"></script> 
+
+
     ?> -->
     </section>
 </div>
@@ -192,4 +220,5 @@ include './config/autoload.php';
 </body>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <script src="/JS/main.js"></script>
+
 </html>
