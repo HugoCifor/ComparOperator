@@ -30,22 +30,25 @@ include './config/autoload.php';
  
 </header>
 
+<?php
+$classe = new Manager();
+$info = $classe ->getDestinationNames();
 
-<?php $data = 'oui'; 
-
+?>
     <img id="logo1"src="./images/logo3.png" alt="">
 <header id="header">  
     <img id="logo2"src="./images/logo2.png" alt="">
     <nav id="navbar"class="flex flex-row items-center justify-between">
         <ul id="destination" class="flex flex-row text-white font-normal text-lg">
             <li class="mx-2 p-2 rounded-white ease-in-out transition duration-500 ease-in-out">
-                <select id="select" name="nom" size="1" class="rounded flex flex-row text-black text-lg ">
-                    <option href="#rome">Rome</option>
-                    <option href="#londres">Londres</option>
-                    <option href="#monaco" >Monaco</option>
-                    <option href="#tunis">Tunis</option>
-                    <option href="#mars">Mars</option>
-                </select>
+                <form action="./selected_destination.php" method="get">
+                    <select id="select" name="dest" size="1" class="rounded flex flex-row text-black text-lg ">
+                        <?php foreach ($info as $key => $value) { ?> 
+                            <option href=<?=$value?> ><?=$value?> </option> <?php
+                        } ?>  
+                    </select>
+                    <button type="submit">allo?</button>
+                </form>
             </li>
         </ul>
     </nav>
@@ -81,29 +84,11 @@ include './config/autoload.php';
             </ol>
         </div>
     </div>
-
-<?php // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    $classe = new Manager();
-
-    $info = $classe ->getDestinationNames();
-    ?>
-    <ul><?php
-        foreach ($info as $key => $value) {
-            echo "<li class='deroulant ".$value."'onclick='names(this)'>".$value."</li>";
-        }
-
-    ?>
-    </ul>
-
-    
+  
 
 <script src="./JS/main.js"></script>
 </body>
 
-<script src="./js/test.js"></script> 
-
-
-    ?> -->
     </section>
 </div>
 </header>

@@ -66,9 +66,11 @@ include './config/autoload.php';
     
 <?php
 
-$test = $classe -> getTOName('Rome');
+$test = $classe -> prepDataForTO('Fram');
 echo '<pre>' . var_export($test, true) . '</pre>';
 ?>
+
+
 
 <script src="./js/main.js"></script>
 </body>
