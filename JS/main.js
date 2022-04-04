@@ -23,3 +23,11 @@ heightInput.addEventListener("change", (e) => {
 		liSlideWidth[i].style.height = `${currentValue}px`;
 	}
 })
+
+
+function names(e)
+{
+    console.log(e.classList[1]);
+	document.location.href="./process/destinationSetter.php?name="+e.classList[1]; 
+
+}  
