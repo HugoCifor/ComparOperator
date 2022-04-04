@@ -1,7 +1,3 @@
-<?php
-include './config/autoload.php';
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,15 +8,5 @@ include './config/autoload.php';
 </head>
 <body>
     
-<?php 
-
-$data=new Manager;
-
-$data -> 
-
-
-?>
-
-
 </body>
 </html>
