@@ -13,59 +13,68 @@ class TourOperator
 
     function __construct($data)
     {
+
+        $this->db = new DataBase("comparoperator");
         
+        return $this-> id = $data ['id'];
     }
 
     function getId()
     {
+        return $this-> id;
 
     }
 
     function getName()
     {
+        return $this-> name;
 
     }
 
     function getLink()
     {
+        return $this-> link;
 
     }
 
     function getGradeCount()
     {
+        return $this-> gradeCount;
 
     }
 
     function getGradeTotal()
     {
 
+        return $this-> gradeTotal;
+
+        
+        return $this-> gradeTotal;
+
+
     }
 
     function getGrade()
     {
 
+        return $this-> grade;
+
+        $grade = $this->gradeTotal / $this->gradeCount;
+        return $grade;
+
+
+
     }
 
     function getPremium()
     {
+        return $this-> isPremium;
+
+
 
     }
 
 
 }
 
-// <<<<<<< HEAD
-// // getId();
-// =======
-
-// function getId(){
-//     return $id;
-// }
-// >>>>>>> 03ecb5ccae179f28d194c919237148dd11a44f67
-// // getName();
-// // getLink();
-// // getGradeCount();
-// // getGradeTotal();
-// // getGrade();
-// // getPremium();
 
