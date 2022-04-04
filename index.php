@@ -17,7 +17,9 @@ include './config/autoload.php';
 <body>
 
 
+
 <nav id="navbar"class="flex flex-row items-center"style="background-image: url(https://sacavoyage.fr/wp-content/uploads/AAAAAAA.jpg);">
+
             <span class=" ">HS Company</span>
                 <ul class="flex flex-row text-white font-normal text-lg">
                     
@@ -79,9 +81,10 @@ include './config/autoload.php';
             </ol>
         </div>
     </div>
-    <!-- <?php $data = 'oui'; // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-    $classe = new Manager($data);
+<?php // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    $classe = new Manager();
+
     $info = $classe ->getDestinationNames();
     ?>
     <ul><?php
@@ -93,6 +96,7 @@ include './config/autoload.php';
     </ul>
 
     
+
 <script src="./JS/main.js"></script>
 </body>
 
