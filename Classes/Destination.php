@@ -14,7 +14,6 @@ class Destination
 
     }
 
-    // private function hydrate($data)
     // {
     //     $this->id = $data['id'] ?? null;
     //     $this->location = $data['location'] ;

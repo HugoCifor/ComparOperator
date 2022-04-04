@@ -1,11 +1,4 @@
 <?php
-// $db = new PDO(
-//     'mysql:host=localhost;dbname=minijeupoo;charset=utf8', // serveur;base de donnée; encodage de caractère
-//     'root', // mon compte à moi pour me connecter au serveur
-//     '' // mon mot de passe pour me connecter au serveur
-// );
-// $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
 
 class DataBase{
     private $db_name;  
