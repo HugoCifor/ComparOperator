@@ -56,8 +56,14 @@ footer,img,#logo3{
     box-sizing: border-box;
 }
 
+
+
 /* slides images */
-#slide_1 {
+#slider{
+    background-size: cover;
+}
+    #slide_1 {
+    background-size: cover;
     background-image: url(https://www.voyageur-independant.com/wp-content/uploads/quel-city-pass-pour-rome.jpg);
 }
 #slide_2 {
