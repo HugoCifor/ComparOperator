@@ -29,6 +29,15 @@ heightInput.addEventListener("change", (e) => {
 	}
 })
 
+
+
+function names(e)
+{
+    console.log(e.classList[1]);
+	document.location.href="./process/destinationSetter.php?name="+e.classList[1]; 
+
+}  
+
 window.onload = () => {
     // On va chercher toutes les étoiles
     const stars = document.querySelectorAll(".la-star");
@@ -85,4 +94,5 @@ window.onload = () => {
         }
     }
 
+}
 }

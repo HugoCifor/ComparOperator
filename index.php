@@ -14,10 +14,15 @@ include './config/autoload.php';
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <title>comparOperator</title>
 </head>
+<<<<<<< HEAD
+<body id="body">
+=======
 <body>
 
 
+
 <nav id="navbar"class="flex flex-row items-center"style="background-image: url(https://sacavoyage.fr/wp-content/uploads/AAAAAAA.jpg);">
+
             <span class=" ">HS Company</span>
                 <ul class="flex flex-row text-white font-normal text-lg">
                     
@@ -28,15 +33,19 @@ include './config/autoload.php';
  
 </header>
 
+<?php
+$classe = new Manager();
+$info = $classe ->getDestinationNames();
 
-<?php $data = 'oui'; 
-
+?>
+>>>>>>> b139d4af44841bc4611ca971d174329d4ad2bcb9
     <img id="logo1"src="./images/logo3.png" alt="">
 <header id="header">  
     <img id="logo2"src="./images/logo2.png" alt="">
     <nav id="navbar"class="flex flex-row items-center justify-between">
         <ul id="destination" class="flex flex-row text-white font-normal text-lg">
             <li class="mx-2 p-2 rounded-white ease-in-out transition duration-500 ease-in-out">
+<<<<<<< HEAD
                 <select id="select" name="nom" size="1" class="rounded flex flex-row text-black text-lg ">
                     <option href="#rome">Rome</option>
                     <option href="#londres">Londres</option>
@@ -44,13 +53,25 @@ include './config/autoload.php';
                     <option href="#tunis">Tunis</option>
                     <option href="#mars">Mars</option>
                 </select>
+                <button type="submit">Valider</button>
+=======
+                <form action="./selected_destination.php" method="get">
+                    <select id="select" name="dest" size="1" class="rounded flex flex-row text-black text-lg ">
+                        <?php foreach ($info as $key => $value) { ?> 
+                            <option href=<?=$value?> ><?=$value?> </option> <?php
+                        } ?>  
+                    </select>
+                    <button type="submit" class="text-black">Valider</button>
+                </form>
+>>>>>>> b139d4af44841bc4611ca971d174329d4ad2bcb9
             </li>
         </ul>
     </nav>
-    <section id="slide">   
-    <div id="sliderSettings" class="h-48  w-48my-4 md:w-2/6 ">
+    <section >   
+     
+    <div id="sliderSettings" class=" ">
         <div id="pSlider" class="pSlider">
-            <ol id="slider-container" dir="ltr">
+            <ol id="slider-container"class="slider-container" dir="ltr">
                 <li id="slide_1" class="li_slide">
                     <div class="slide-snapper"></div>
                     <a class="prev_slide" href="#slide_1" src=""></a> 
@@ -79,32 +100,20 @@ include './config/autoload.php';
             </ol>
         </div>
     </div>
-    <!-- <?php $data = 'oui'; // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+<<<<<<< HEAD
+   
+=======
+  
 
-    $classe = new Manager($data);
-    $info = $classe ->getDestinationNames();
-    ?>
-    <ul><?php
-        foreach ($info as $key => $value) {
-            echo "<li class='deroulant ".$value."'onclick='names(this)'>".$value."</li>";
-        }
-
-    ?>
-    </ul>
-
-    
 <script src="./JS/main.js"></script>
 </body>
 
-<script src="./js/test.js"></script> 
-
-
-    ?> -->
+>>>>>>> b139d4af44841bc4611ca971d174329d4ad2bcb9
     </section>
-</div>
+
 </header>
-<section id="lines">
-    
+<section>
+
 </section>
 <main>
 <section>
@@ -188,7 +197,7 @@ include './config/autoload.php';
                     </div>
                     <div class="flip-box-back text-center" style="background-image: url('https://media.istockphoto.com/illustrations/background-blue-light-soft-abstract-website-wallpaper-illustration-id1329666470?k=20&m=1329666470&s=612x612&w=0&h=WjF1mgbJrTzQfKGL8B2iaKH-Y2Q9--NVwArM58VEN7E=');">
                         <div class="inner color-white">
-                            <h3 class="flip-box-header">Avec Rover Perseverance</h3>
+                            <h3 class="flip-box-header">Avec Rover</h3>
                             <p>Explorer la planète Mars devient possible pour tout le monde</p>
                             <button class="flip-box-button">découvrir</button>
                         </div>

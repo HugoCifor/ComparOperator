@@ -13,12 +13,19 @@ class TourOperator
 
     function __construct($data)
     {
-
         $this->db = new DataBase("comparoperator");
-        
-        return $this-> id = $data ['id'];
+        $this->hydrate($data);
     }
 
+    function hydrate($data) {
+        $this->id = $data['id'] ?? null;
+        $this->name = $data['name'] ;
+        $this->link = $data['link'] ;
+        $this->gradeCount = $data['grade_count'] ;
+        $this->gradeTotal = $data['grade_total'] ;
+        $this->isPremium = $data['is_premium'] ;
+
+    }
     function getId()
     {
         return $this-> id;
@@ -49,7 +56,6 @@ class TourOperator
         return $this-> gradeTotal;
 
         
-        return $this-> gradeTotal;
 
 
     }
@@ -57,7 +63,7 @@ class TourOperator
     function getGrade()
     {
 
-        return $this-> grade;
+    
 
         $grade = $this->gradeTotal / $this->gradeCount;
         return $grade;
@@ -68,11 +74,20 @@ class TourOperator
 
     function getPremium()
     {
-        return $this-> isPremium;
-
-
-
+        return $this->isPremium;
     }
+
+    function AddNewTO()
+    {
+        $req = $this->db->getPDO()->prepare('INSERT INTO tour_operator (name,link,is_premium) VALUE (?,?,?)');
+        $req->execute([
+            $this->name,
+            $this ->link,
+            $this->isPremium
+        ]);
+    }
+
+
 
 
 }
