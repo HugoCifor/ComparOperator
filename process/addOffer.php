@@ -19,3 +19,4 @@ $newOffer =array(
 
 $offer = new Manager();
 $offer-> creatNewOffer($newOffer);
+
