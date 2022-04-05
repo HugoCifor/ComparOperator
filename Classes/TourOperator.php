@@ -21,9 +21,9 @@ class TourOperator
         $this->id = $data['id'] ?? null;
         $this->name = $data['name'] ;
         $this->link = $data['link'] ;
-        $this->gradeCount = $data['grade_count'] ;
-        $this->gradeTotal = $data['grade_total'] ;
-        $this->isPremium = $data['is_premium'] ;
+        $this->gradeCount = $data['grade_count'] ?? null;
+        $this->gradeTotal = $data['grade_total'] ?? null ;
+        $this->isPremium = $data['is_premium'];
 
     }
     function getId()
