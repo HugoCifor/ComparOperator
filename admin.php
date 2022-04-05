@@ -28,26 +28,18 @@ $info = $classe ->getDestinationNames();
         <label >le tour-opérateur est-il premium?</label>
         <input type="checkbox" name="TOPremium" id="TOPremium"><br>
         <label >selectionner la destination que propose le tour-opérateur</label>
-        <select name="destination" id="destination">
-                <?php foreach ($info as $key => $value) { ?> 
-                    <option href=<?=$value?> ><?=$value?> </option> <?php
-                } ?> 
-        </select><br>
+        <input type="text" name="destination" id="destinationTO"><br>
         <label >ajout du prix</label>   
         <input type="text" name="price" id="price" placeholder="prix en euro €">     <br>
         <button type="submit">valider</button>
     </form>
 </div>
 
-<div class="AddTO">
+<div class="addOffer">
     <h2>Ajouter une offre</h2>
     <form action="" method="post">
         <label >selectionner la destination que propose le tour-opérateur</label>
-        <select name="destination" id="destination">
-                <?php foreach ($info as $key => $value) { ?> 
-                    <option href=<?=$value?> ><?=$value?> </option> <?php
-                } ?> 
-        </select><br>
+        <input type="text" name="destination" id="newDestination"><br>
         <label >selectionner le tour-opérateur</label>
         <select name="destination" id="destination">
                 <?php foreach ($info as $key => $value) { ?> 
