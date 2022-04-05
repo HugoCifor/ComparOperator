@@ -61,7 +61,7 @@ $info = $classe ->getDestinationNames();
                             <option href=<?=$value?> ><?=$value?> </option> <?php
                         } ?>  
                     </select>
-                    <button type="submit">allo?</button>
+                    <button type="submit" class="text-black">Valider</button>
                 </form>
 >>>>>>> b139d4af44841bc4611ca971d174329d4ad2bcb9
             </li>
