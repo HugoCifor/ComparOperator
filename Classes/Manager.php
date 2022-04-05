@@ -67,8 +67,28 @@ class Manager
 
     function createTourOperator($newTOInfo)
     {
-        return $newTOInfo;
+        if ($newTOInfo['premium']=='on') {
+            $newTOInfo['premium']=1;
+        }else {
+            $newTOInfo['premium']=0;
+        }
+        
+        $value=array(
+            'name' => $newTOInfo['name'],
+            'link' => $newTOInfo['link'],
+            'is_premium' => $newTOInfo['premium']
+        );
+        $newTO = new TourOperator($value);
+        $newTO->AddNewTO();
+
     }
+
+    function  nameUniformation($name)
+    {
+        $result = strtolower($name);
+        return $result;
+    }
+
 
 
     function createDestination($newDestinationInfo)
@@ -107,7 +127,7 @@ class Manager
         }
     }
 
-    function getTOName($names) //// avoir le nom du TO grace au nom de la destination
+    function getTONamesByDest($names) //// avoir le nom du TO grace au nom de la destination
     {
         $TO=$this->getTOInfoByMethod($names,'destination');
         $result = [];
@@ -116,13 +136,33 @@ class Manager
         }
         return $result;
     }
+    function getAllTONames() //// avoir le nom du TO grace au nom de la destination
+    {
+        $TOs=$this->db->getPDO()->prepare('SELECT name FROM tour_operator ');
+        $TOs->execute([]);
+        $result=$TOs->fetchAll();
+        $endresult = [];
+        foreach ($result as $key => $value) {
+            array_push($endresult,$value['name']);
+        }
+        return $endresult;
 
+        
+    }
     function prepDataForTO($names) // passer le TO depuis la db dans la classe TO
     {
   
         $TO=$this->getTOInfoByMethod($names,'TO');
         return $TO;    
     }
+
+    function creatNewOffer($newOffer){
+        $new
+
+
+
+    }
+
 
 
 

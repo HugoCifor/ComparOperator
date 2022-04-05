@@ -4,33 +4,36 @@ include '../config/autoload.php';
 
 $toName = $_POST['TOName'];
 $toLink = $_POST['TOLink'];
-$toPremium = $_POST['TOPremium'];
-$destination = $_POST['destination'];
-$price = $_POST['price'];
+
+if ($_POST['TOPremium']=='on') {
+    $toPremium=$_POST['TOPremium'];
+}else{
+    $toPremium = 'off';
+}
+var_dump($toPremium);
+
+
 
 if(
+
     isset($toName) && !empty($toName) &&
     isset($toLink) && !empty($toLink) &&
-    isset($toPremium) && !empty($toPremium) &&
-    isset($destination) && !empty($destination) &&
-    isset($price) && !empty($price) 
+    isset($toPremium) && !empty($toPremium)
+
 ){
     $newTO = array(
         "name" => $toName,
         "link" => $toLink,
-        "premium" => $toPremium,
-        "destination" => $destination,
-        "price" => $price
+
+        "premium" => $toPremium
     );
     
     $TO = new manager();
+    $TO -> createTourOperator($newTO);
 
-    $info = $TO -> createTourOperator($newTO);
-    // echo '<pre>' . var_export($info, true) . '</pre>';
+    header('Location:../admin.php');
 
-    
+
 }
-
-
 
 
