@@ -65,15 +65,15 @@ class Manager
     }
 
 
-    function createTourOperator()
+    function createTourOperator($newTOInfo)
     {
-
+        return $newTOInfo;
     }
 
 
-    function createDestination()
+    function createDestination($newDestinationInfo)
     {
-
+        return $newDestinationInfo;
     }
     
 

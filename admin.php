@@ -20,7 +20,7 @@ $info = $classe ->getDestinationNames();
 
 <div class="AddTO">
     <h2>Ajouter un TO</h2>
-    <form action="" method="post">
+    <form action="./process/ajoutTO.php" method="post">
         <label >Nom du tour-opérateur</label>
         <input type="text" name="TOName" id="TOName"><br>
         <label >Lien du site du tour-opérateur</label>
