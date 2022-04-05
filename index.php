@@ -47,7 +47,7 @@ $info = $classe ->getDestinationNames();
                             <option href=<?=$value?> ><?=$value?> </option> <?php
                         } ?>  
                     </select>
-                    <button type="submit">allo?</button>
+                    <button type="submit" class="text-black">Valider</button>
                 </form>
             </li>
         </ul>

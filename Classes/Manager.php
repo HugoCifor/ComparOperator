@@ -77,28 +77,9 @@ class Manager
     }
     
 
-    function getTOFromName($names)
-    {
-        $result = [];
-        $req=$this->db->getPDO()->prepare('SELECT tour_operator_id FROM destination WHERE location = ? ' );
-        $req -> execute([$names]);
-        $operatorId = $req->fetchAll();
-        // return $operatorId;
-
-        foreach ($operatorId as $key => $value) {
-            $req1=$this->db->getPDO()->prepare('SELECT * FROM tour_operator WHERE id = ?' );
-            $req1 -> execute([$value[0]]);
-            $name = $req1->fetch();
-            array_push($result,$name);
-        }
-        return $result;
-        
-
-    }
-
-    function getTOInfoByMethod($name,$methode){
+    function getTOInfoByMethod($name,$methode){ // avoir toutes les info du TO grace au nom de la destination ou du TO suivant la methode
         switch ($methode) {
-            case 'dest':
+            case 'destination':
                 $result = [];
                 $req=$this->db->getPDO()->prepare('SELECT tour_operator_id FROM destination WHERE location = ? ' );
                 $req -> execute([$name]);
@@ -126,9 +107,9 @@ class Manager
         }
     }
 
-    function getTOName($names)
+    function getTOName($names) //// avoir le nom du TO grace au nom de la destination
     {
-        $TO=$this->getTOInfoByMethod($names,'dest');
+        $TO=$this->getTOInfoByMethod($names,'destination');
         $result = [];
         foreach ($TO as $key => $value) {
             array_push($result,$value['name']);
@@ -136,21 +117,11 @@ class Manager
         return $result;
     }
 
-    function prepDataForTO($names)
+    function prepDataForTO($names) // passer le TO depuis la db dans la classe TO
     {
   
         $TO=$this->getTOInfoByMethod($names,'TO');
-        $value=array(
-            "id"=>$TO['id'],
-            "name"=>$TO['name'],
-            "link"=>$TO['link'],
-            "grade_count"=>$TO['grade_count'],
-            "grade_total"=>$TO['grade_total'],
-            "is_premium"=>$TO['is_premium'],
-        );
-        return $value;
-
-     
+        return $TO;    
     }
 
 
