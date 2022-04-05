@@ -11,16 +11,17 @@ class Destination
     function __construct($data)
     {
         $this->db = new DataBase("comparoperator");
+        $this->hydrate($data);
 
     }
+    function hydrate($data) {
 
-    // {
-    //     $this->id = $data['id'] ?? null;
-    //     $this->location = $data['location'] ;
-    //     $this->price = $data['price'];
-    //     $this->tourOperatorId = $data['tour_operator_id'];
-    // }
+           $this->id = $data['id'] ?? null;
+           $this->location = $data['location'] ;
+           $this->price = $data['price'] ;
+           $this->tourOperatorId = $data['tour_operator_id'] ;
 
+    }
     // public function toSql() {
     //     return array(
     //         'id' => $this->id,

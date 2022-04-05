@@ -54,7 +54,7 @@ $info = $classe ->getDestinationNames();
                     <option href="#mars">Mars</option>
                 </select>
                 <button type="submit">Valider</button>
-=======
+
                 <form action="./selected_destination.php" method="get">
                     <select id="select" name="dest" size="1" class="rounded flex flex-row text-black text-lg ">
                         <?php foreach ($info as $key => $value) { ?> 
@@ -63,7 +63,7 @@ $info = $classe ->getDestinationNames();
                     </select>
                     <button type="submit" class="text-black">Valider</button>
                 </form>
->>>>>>> b139d4af44841bc4611ca971d174329d4ad2bcb9
+
             </li>
         </ul>
     </nav>
