@@ -13,7 +13,13 @@ class TourOperator
 
     function __construct($data)
     {
-        return $this-> id = $data ['id'];
+        $this->db = new DataBase("comparoperator");
+        return $this->id = $data['id'];
+        return $this->name = $data['name'];
+        return $this->link = $data['link'];
+        return $this->gradeCount = $data['gradeCount'];
+        return $this->gradeTotal = $data['gradeTotal'];
+        return $this->isPremium = $data['isPremium'];
     }
 
     function getId()
@@ -42,24 +48,32 @@ class TourOperator
 
     function getGradeTotal()
     {
-        
+
         return $this-> gradeTotal;
+
+        
+
 
     }
 
     function getGrade()
     {
+
+        return $this-> grade;
+
         $grade = $this->gradeTotal / $this->gradeCount;
         return $grade;
+
 
 
     }
 
     function getPremium()
     {
-        return $this-> isPremium;
-
+        return $this->isPremium;
     }
+
+
 
 
 }

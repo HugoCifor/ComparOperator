@@ -1,3 +1,9 @@
+
+
+function names(e)
+{
+    console.log(e.classList[1]);
+
 // carousel
 let widthInput = document.getElementById("slider-width");
 
@@ -22,6 +28,15 @@ heightInput.addEventListener("change", (e) => {
 		liSlideWidth[i].style.height = `${currentValue}px`;
 	}
 })
+
+
+
+function names(e)
+{
+    console.log(e.classList[1]);
+	document.location.href="./process/destinationSetter.php?name="+e.classList[1]; 
+
+}  
 
 window.onload = () => {
     // On va chercher toutes les étoiles
@@ -78,4 +93,6 @@ window.onload = () => {
             }
         }
     }
+
+}
 }
