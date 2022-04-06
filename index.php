@@ -14,27 +14,27 @@ include './config/autoload.php';
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <title>comparOperator</title>
 </head>
-<body>
+<body id="body">
 <?php
         $classe = new Manager();
         $info = $classe ->getDestinationNames();
         ?> 
-    <nav id="navbar"class="flex flex-row items-center">
-        <img id="logo"src="./images/logo.png" alt="">
+    <nav id="navbar"class="flex flex-row items-center ">
+        <img id="logo"src="./images/logo1.png" alt="">
+        <img id="logo"src="./images/logo2.png" alt="">
         <ul id="destination" class="flex flex-row text-white font-normal text-lg">
             <li class="mx-2 p-2 rounded-white ease-in-out transition duration-500 ease-in-out">
                 <form action="./selected_destination.php" method="get">
-                    <select id="select" name="dest" size="1" class="rounded flex flex-row text-white text-lg ">
+                    <select id="select" name="dest" size="1" class="rounded flex flex-row text-blue-400 text-lg ">
                         <?php foreach ($info as $key => $value) { ?> 
                             <option href=<?=$value?> ><?=$value?> </option> <?php
                         } ?>  
                     </select><br>
-                    <button type="submit" class="text-white rounded border-solid bg-blue-700 hover:bg-blue-400 ">Valider</button>
+                    <button type="submit" class="text-blue-400 rounded border-solid bg-white hover:bg-gray-400 ">Valider</button>
                 </form>
             </li>
         </ul>
     </nav>
-<header id="header">  
     <section >   
        <div id="sliderSettings" class=" ">
             <div id="pSlider" class="pSlider">
@@ -68,7 +68,6 @@ include './config/autoload.php';
             </div>
         </div>
     </section>
-</header>
 <main>
     <section>
         <div id="card" style="background-image: url(https://www.alibabuy.com/photos/library/1500/11411.jpg);">  
@@ -161,10 +160,10 @@ include './config/autoload.php';
         </div>
     </section>
 </main>
-<footer id="footer">
-   
+<footer class="bg-">
+
 </footer>
-</body>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <script src="/JS/main.js"></script>
+</body>
 </html>
