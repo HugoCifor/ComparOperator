@@ -11,6 +11,14 @@ if (!empty($_POST['DestName'])&& $_POST['DestName'] != ' ' ) {
     $destName=$_POST['selectDest'];
 }
 
+if(
+
+    isset($TOname) && !empty($TOname) &&
+    isset($destPrice) && !empty($destPrice) &&
+    isset($destName) && !empty($destName)
+
+){
+
 $newOffer =array(
     'TOname'=>$TOname,
     'destPrice'=>$destPrice,
@@ -25,3 +33,6 @@ $offer-> creatNewOffer($newOffer);
 
 header('Location:../admin.php');
 
+}else{
+    echo "<script>alert(\"compléter tous les champs\")</script>";
+}
