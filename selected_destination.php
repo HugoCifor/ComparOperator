@@ -12,30 +12,63 @@ include './config/autoload.php';
      <title>Document</title>
  </head>
  <body>
-     <?php
-$manager = new Manager();
-$TOs = $manager->getTONamesByDest($_GET['dest']);
+    <div class="nomDeDestination">
+        <h1><?=$_GET['dest']?></h1>
+    </div>
 
-?>
-     <div class="TOResult">
-        <?php foreach ($TOs as $key => $value) {
-            $set= new Manager();
-            $donnee = $set-> prepDataForTO($value);
-            $premium = new TourOperator($donnee);
-            $result = $premium->getPremium();
-            if ($result==1) {
-                ?><div class="TO"><a href=<?=$donnee['link']?>><?=$donnee['name']?></a></div><?php 
-            }else{
-                ?><div class="TO"><?=$value?></div> <?php
-            }       
-        }?>         
-     </div>
 
+    <?php
+    $manager = new Manager();
+    $TOs = $manager->getTONamesByDest($_GET['dest']);
+    ?>
+        <h3>Nos tours-opérateur</h3>
+        <div class="TOtoDest">
+        <div class="TOResult">
+            <?php foreach ($TOs as $key => $value) {
+                $set= new Manager();
+                $donnee = $set-> prepDataForTO($value);
+                $premium = new TourOperator($donnee);
+                $result = $premium->getPremium();
+                if ($result==1) {
+                    ?><div class="TO"><a href=<?=$donnee['link']?>><?=$donnee['name']?></a></div><?php 
+                }else{
+                    ?><div class="TO"><?=$value?></div> <?php
+                }       
+            }?>      
+        </div>
+        <div class="TONotes">
+            <?php foreach ($TOs as $key => $value) {
+                $set= new Manager();
+                $donnee = $set-> prepDataForTO($value);
+                $premium = new TourOperator($donnee);
+                $result = $premium->getGrade();
+                ?><div class='notesStars'>
+                    <div class='stars'><?php
+                    if ($result>0) {
+                        for ($i=0; $i < $result; $i++) { 
+                            if ($result-$i>=1) {
+                               ?><img class="star"  src="./images/star.webp" alt="" srcset=""><?php
+                            }elseif ($result-$i>0) {
+                                ?><img class="star" src="./images/star-half-yellow.webp" alt="" srcset=""><?php
+                            }
+                        }
+                        for ($i=0; $i <5-$result; $i++) { 
+                            ?><img class="star"  src="./images/star-line-yellow-1.webp" alt="" srcset=""><?php
+                        }
+                        ?>
+                        </div>
+                        <div class="note"><?=$result?>/5</div> <?php
+                    }else {
+                        ?> <div class="note">pas encore noté</div> <?php
+                    }
+                ?></div><?php
+            } ?>
+        </div>
+    </div>
 
     <?php 
 
         // affichage image
-        //affichage nom de l'endroit
         //affichage note si il y en a 
         //affichage form ajout com et note
 

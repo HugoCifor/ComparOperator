@@ -32,5 +32,5 @@ $offer-> creatNewOffer($newOffer);
 header('Location:../admin.php');
 
 }else{
-    echo "<script>alert(\"compléter tous les champs\")</script>";
+    header('Location:../admin.php?ID=NoOffer');
 }

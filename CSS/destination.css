@@ -1,13 +1,34 @@
-.TOResult{
+.TOtoDest{
+    display: flex;
+    flex-direction: row;
+
 }
 .TO{
     width: 25%;
-    border : solid red 2px
     
     
 }
-.price{
-    border: solid blue 2px;
+.TONotes{ 
+    margin-left: 15px;
+    display: flex;
+
     width: 25%;
+}
+.TONotes{
+    display: flex;
+    flex-direction: column;
+
+}
+.notesStars{
+    display: flex;
+    flex-direction: row;
+}
+.star{
+    width: 20px
+}
+
+.stars{
+    width :100px;
+    border: solid blue 2px;
 
 }
