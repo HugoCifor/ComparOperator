@@ -45,7 +45,6 @@ $info = $classe ->getDestinationNames();
     <nav id="navbar"class="flex flex-row items-center justify-between">
         <ul id="destination" class="flex flex-row text-white font-normal text-lg">
             <li class="mx-2 p-2 rounded-white ease-in-out transition duration-500 ease-in-out">
-
                 <form action="./selected_destination.php" method="get">
                     <select id="select" name="dest" size="1" class="rounded flex flex-row text-black text-lg ">
                         <?php foreach ($info as $key => $value) { ?> 

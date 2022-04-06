@@ -24,6 +24,7 @@ if(
     $newTO = array(
         "name" => $toName,
         "link" => $toLink,
+
         "premium" => $toPremium
     );
     
@@ -34,4 +35,5 @@ if(
 
 
 }
+
 
