@@ -62,7 +62,7 @@ $listTO = $classe ->getAllTONames();
 
 <div class="SetPremium">
     <h2>Gestion des premiums</h2>
-    <form action="" method="post">
+    <form action="./process/updatePremium.php" method="post">
                <label >selectionner le tour-opérateur</label>
         <select name="TOname" id="TOPremium" class="TO">
                 <?php foreach ($listTO as $key => $value) { ?> 
