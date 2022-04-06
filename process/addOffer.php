@@ -17,8 +17,6 @@ $newOffer =array(
     'destName'=>$destName
 );
 
-
-
 $offer = new Manager();
 $offer-> creatNewOffer($newOffer);
 
