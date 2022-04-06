@@ -18,8 +18,19 @@ include './config/autoload.php';
 $classe = new Manager();
 $infoDest = $classe ->getDestinationNames();
 $listTO = $classe ->getAllTONames();
+
+if (isset($_GET['ID'])) {
+    if ($_GET['ID']=='NoOffer') {
+        echo "<script>alert(\"tous les champs ne sont pas remplis pour ajouter une offre\")</script>";
+    }elseif ($_GET['ID']=='NoOffer') {
+        # code...
+    }
+}
+
+
+
 ?>
-<<<<<<< HEAD
+
 <section>
         <div class="box-container">
             <div class="box ">
