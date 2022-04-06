@@ -157,8 +157,8 @@ class Manager
     }
 
     function creatNewOffer($newOffer){
-        $new
-
+        
+        
 
 
     }

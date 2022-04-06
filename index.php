@@ -14,12 +14,8 @@ include './config/autoload.php';
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <title>comparOperator</title>
 </head>
-<<<<<<< HEAD
+
 <body id="body">
-=======
-<body>
-
-
 
 <nav id="navbar"class="flex flex-row items-center"style="background-image: url(https://sacavoyage.fr/wp-content/uploads/AAAAAAA.jpg);">
 
@@ -38,22 +34,13 @@ $classe = new Manager();
 $info = $classe ->getDestinationNames();
 
 ?>
->>>>>>> b139d4af44841bc4611ca971d174329d4ad2bcb9
+
     <img id="logo1"src="./images/logo3.png" alt="">
 <header id="header">  
     <img id="logo2"src="./images/logo2.png" alt="">
     <nav id="navbar"class="flex flex-row items-center justify-between">
         <ul id="destination" class="flex flex-row text-white font-normal text-lg">
             <li class="mx-2 p-2 rounded-white ease-in-out transition duration-500 ease-in-out">
-<<<<<<< HEAD
-                <select id="select" name="nom" size="1" class="rounded flex flex-row text-black text-lg ">
-                    <option href="#rome">Rome</option>
-                    <option href="#londres">Londres</option>
-                    <option href="#monaco" >Monaco</option>
-                    <option href="#tunis">Tunis</option>
-                    <option href="#mars">Mars</option>
-                </select>
-                <button type="submit">Valider</button>
 
                 <form action="./selected_destination.php" method="get">
                     <select id="select" name="dest" size="1" class="rounded flex flex-row text-black text-lg ">
@@ -100,15 +87,13 @@ $info = $classe ->getDestinationNames();
             </ol>
         </div>
     </div>
-<<<<<<< HEAD
-   
-=======
+
   
 
 <script src="./JS/main.js"></script>
 </body>
 
->>>>>>> b139d4af44841bc4611ca971d174329d4ad2bcb9
+
     </section>
 
 </header>
