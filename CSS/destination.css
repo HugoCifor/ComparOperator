@@ -1,13 +1,36 @@
-.TOResult{
-}
-.TO{
-    width: 25%;
-    border : solid red 2px
-    
-    
-}
-.price{
-    border: solid blue 2px;
-    width: 25%;
+.TOtoDest{
+    display: flex;
+    flex-direction: row;
 
+}
+
+.TONotes{ 
+    margin-left: 15px;
+    display: flex;
+
+ 
+}
+.TONotes{
+    display: flex;
+    flex-direction: column;
+
+}
+.notesStars{
+    display: flex;
+    flex-direction: row;
+    border : 2px solid rgb(0, 255, 242);
+
+    
+}
+.star{
+    height: 15px;
+}
+
+.stars{
+    width :100px;
+    
+
+}
+.note{
+    margin-left: 10px;
 }

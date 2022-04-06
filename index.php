@@ -16,23 +16,11 @@ include './config/autoload.php';
 </head>
 
 <body id="body">
-
-<body>
-
-
-
-<nav id="navbar"class="flex flex-row items-center"style="background-image: url(https://sacavoyage.fr/wp-content/uploads/AAAAAAA.jpg);">
-
-            <span class=" ">HS Company</span>
-                <ul class="flex flex-row text-white font-normal text-lg">
-                    
-                    
-                </ul>
+    <nav id="navbar"class="flex flex-row items-center"style="background-image: url(https://sacavoyage.fr/wp-content/uploads/AAAAAAA.jpg);">
+        <span class=" ">HS Company</span>
+            <ul class="flex flex-row text-white font-normal text-lg">
+            </ul>
         </nav>
-<header>
- 
-</header>
-
 <?php
 $classe = new Manager();
 $info = $classe ->getDestinationNames();
@@ -90,7 +78,6 @@ $info = $classe ->getDestinationNames();
             </ol>
         </div>
     </div>
-
 <script src="./JS/main.js"></script>
 </body>
 
