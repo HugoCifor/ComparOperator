@@ -82,16 +82,25 @@ include './config/autoload.php';
     </div>
 
     <div class="imgLocation">
-        
+        <?php
+        $imgLocation = new Image($_GET['dest']);
+        $imageFind = $imgLocation -> getImage();
+         ?><img src=<?=$imageFind['img']?> alt="" >
 
-
+   
     </div>
 
-    <?php 
+   
+        <div class="alreadyPostedReview">
+            <div class="author"></div>
+            <div class="message"></div>
+        </div>
+        <div class="newReview">
+            <div class="newAuthor"></div>
+            <div class="newMessage"></div>
+        </div>
 
-        // affichage image
-        //affichage note si il y en a 
-        //affichage form ajout com et note
+      <?php    //affichage form ajout com et note
 
 
     ?>
