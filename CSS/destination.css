@@ -3,16 +3,12 @@
     flex-direction: row;
 
 }
-.TO{
-    width: 25%;
-    
-    
-}
+
 .TONotes{ 
     margin-left: 15px;
     display: flex;
 
-    width: 25%;
+ 
 }
 .TONotes{
     display: flex;
@@ -22,13 +18,19 @@
 .notesStars{
     display: flex;
     flex-direction: row;
+    border : 2px solid rgb(0, 255, 242);
+
+    
 }
 .star{
-    width: 20px
+    height: 15px;
 }
 
 .stars{
     width :100px;
-    border: solid blue 2px;
+    
 
+}
+.note{
+    margin-left: 10px;
 }
