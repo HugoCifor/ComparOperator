@@ -62,14 +62,8 @@ class TourOperator
 
     function getGrade()
     {
-
-    
-
         $grade = $this->gradeTotal / $this->gradeCount;
         return $grade;
-
-
-
     }
 
     function getPremium()
