@@ -16,19 +16,11 @@ include './config/autoload.php';
 </head>
 
 <body id="body">
-
-<nav id="navbar"class="flex flex-row items-center"style="background-image: url(https://sacavoyage.fr/wp-content/uploads/AAAAAAA.jpg);">
-
-            <span class=" ">HS Company</span>
-                <ul class="flex flex-row text-white font-normal text-lg">
-                    
-                    
-                </ul>
+    <nav id="navbar"class="flex flex-row items-center"style="background-image: url(https://sacavoyage.fr/wp-content/uploads/AAAAAAA.jpg);">
+        <span class=" ">HS Company</span>
+            <ul class="flex flex-row text-white font-normal text-lg">
+            </ul>
         </nav>
-<header>
- 
-</header>
-
 <?php
 $classe = new Manager();
 $info = $classe ->getDestinationNames();
@@ -41,7 +33,6 @@ $info = $classe ->getDestinationNames();
     <nav id="navbar"class="flex flex-row items-center justify-between">
         <ul id="destination" class="flex flex-row text-white font-normal text-lg">
             <li class="mx-2 p-2 rounded-white ease-in-out transition duration-500 ease-in-out">
-
                 <form action="./selected_destination.php" method="get">
                     <select id="select" name="dest" size="1" class="rounded flex flex-row text-black text-lg ">
                         <?php foreach ($info as $key => $value) { ?> 
@@ -87,9 +78,6 @@ $info = $classe ->getDestinationNames();
             </ol>
         </div>
     </div>
-
-  
-
 <script src="./JS/main.js"></script>
 </body>
 

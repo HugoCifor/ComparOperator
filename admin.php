@@ -19,6 +19,7 @@ $classe = new Manager();
 $infoDest = $classe ->getDestinationNames();
 $listTO = $classe ->getAllTONames();
 ?>
+<<<<<<< HEAD
 <section>
         <div class="box-container">
             <div class="box ">
@@ -42,7 +43,6 @@ $listTO = $classe ->getAllTONames();
 <section>
         <div class="box-container">
             <div class="box">
-                <div class="AddTO">
                     <div class="info">
                         <div class="AddOffer">
                             <h2 class="text-white text-center">Ajouter d'une destination</h2>
@@ -72,7 +72,6 @@ $listTO = $classe ->getAllTONames();
                                 <section>
                         <div class="box-container">
             <div class="box">
-                <div class="AddTO">
                     <div class="info">
                         <div class="SetPremium">
                             <h2 class="text-white text-center">Gestion des premiums</h2>
