@@ -157,9 +157,37 @@ class Manager
     }
 
     function creatNewOffer($newOffer){
-        $new
+        $TOinfo=$this->getTOInfoByMethod($newOffer['TOname'],'TO');
+        $newarray = array(
+            'location'=>$newOffer['destName'],
+            'price'=>$newOffer['destPrice'],
+            'tour_operator_id'=>$TOinfo['id']
+        );
+
+        $newDest= new Destination($newarray);
+        $newDest-> createNewDest();
 
 
+    }
+
+    function updatePremium($updateP)
+    {
+        if ($updateP['TOPremium']=='on') {
+            $updateP['TOPremium']=1;
+        }else {
+            $updateP['TOPremium']=0;
+        }
+        $TO=$this->getTOInfoByMethod($updateP['TOname'],'TO');
+        $updateP = array(
+            'id'=>$TO['id'],
+            'name'=>$TO['name'],
+            'link'=>$TO['link'],
+            'grade_count'=>$TO['link'],
+            'grade_total'=>$TO['grade_total'],
+            'is_premium'=>$updateP['TOPremium']
+        );
+        $newTO = new TourOperator($updateP);
+        $newTO->updatePremium();
 
     }
 

@@ -87,6 +87,11 @@ class TourOperator
         ]);
     }
 
+    function updatePremium()
+    {
+        $upd = $this->db->getPDO()->prepare('UPDATE tour_operator SET is_premium = ? WHERE id ='.$this->id);
+        $upd->execute([$this->isPremium]);
+    }
 
 
 

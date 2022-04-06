@@ -16,7 +16,6 @@ include './config/autoload.php';
 $manager = new Manager();
 $TOs = $manager->getTONamesByDest($_GET['dest']);
 
-var_dump($TOs)
 ?>
      <div class="TOResult">
         <?php foreach ($TOs as $key => $value) {
@@ -32,6 +31,16 @@ var_dump($TOs)
         }?>         
      </div>
 
+
+    <?php 
+
+        // affichage image
+        //affichage nom de l'endroit
+        //affichage note si il y en a 
+        //affichage form ajout com et note
+
+
+    ?>
 
      
  </body>
