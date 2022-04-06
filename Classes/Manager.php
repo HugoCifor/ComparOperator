@@ -157,6 +157,8 @@ class Manager
     }
 
     function creatNewOffer($newOffer){
+        
+        
         $TOinfo=$this->getTOInfoByMethod($newOffer['TOname'],'TO');
         $newarray = array(
             'location'=>$newOffer['destName'],
