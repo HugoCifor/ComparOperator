@@ -177,7 +177,7 @@ include './config/autoload.php';
        <div class="containerGrid bg-white">
            
            <main class="grid" >
-                <?php foreach ($info as $key => $value) { ?> 
+           <?php foreach ($info as $key => $value) { ?> 
                 <article > 
                 <?php
             $imgLocation = new Destinationdetail($value);
@@ -187,9 +187,9 @@ include './config/autoload.php';
                     <div class="text">
                         <h3 href=<?=$value?>><?=$value?></h3>
                     </div>
+                   
                 </article>
-                    <?php
-                        } ?> 
+                    <?php     } ?> 
             </main>
         </div>
     </section>
