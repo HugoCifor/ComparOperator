@@ -256,7 +256,7 @@ footer,img,#logo3{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding: 35px 15px;
+    padding: 50px 15px;
     width: 100%;
   }
   
@@ -383,6 +383,16 @@ footer,img,#logo3{
       background-position: center;
       background-color:rgba(22, 145, 197);
   }
+#card{
+    object-fit: scale-down;
+}
+#allDestination{
+    background-color: rgba(22, 145, 197);
+    height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
   #butTop{
     overflow: hidden;
     bottom:  0;
