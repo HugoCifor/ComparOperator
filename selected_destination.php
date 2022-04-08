@@ -341,6 +341,6 @@ if (isset($_GET['dest'])&&in_array($_GET['dest'],$control)) {
      </body>
      </html>
 <?php
-}else{
-    header('location:./index.php');
-}
+// }else{
+//     header('location:./index.php');
+// }
