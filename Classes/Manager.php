@@ -34,12 +34,6 @@ class Manager
         return $allNames;
     }
 
-    function getOperatorByDestination()
-    {
-
-    }
-
-
     function createReview()
     {
 
@@ -58,11 +52,6 @@ class Manager
 
     }
 
-
-    function updateOperatorToPremium()
-    {
-
-    }
 
 
     function createTourOperator($newTOInfo)
@@ -190,6 +179,16 @@ class Manager
         );
         $newTO = new TourOperator($updateP);
         $newTO->updatePremium();
+
+    }
+
+    function prepDataForDest($name,$TOid) // passer le TO depuis la db dans la classe TO
+    {   
+        
+        $req=$this->db->getPDO()->prepare('SELECT * FROM destination WHERE location  = ? AND  	tour_operator_id ='.$TOid );
+                $req -> execute([$name]);
+                $result=$req->fetch();
+        return $result;
 
     }
 
