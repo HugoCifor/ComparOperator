@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le : ven. 08 avr. 2022 à 08:50
+-- Généré le : ven. 08 avr. 2022 à 13:18
 -- Version du serveur : 5.7.33
 -- Version de PHP : 7.4.19
 
@@ -47,7 +47,13 @@ INSERT INTO `destination` (`id`, `location`, `price`, `tour_operator_id`) VALUES
 (6, 'Rome', 1595, 3),
 (7, 'Belize', 1692, 3),
 (8, 'Seychelles', 2400, 7),
-(9, 'Seychelles', 1500, 2);
+(9, 'Seychelles', 1500, 2),
+(10, 'Japon', 2489, 1),
+(11, 'Islande', 1250, 3),
+(12, 'Japon', 2048, 5),
+(13, 'Antarctique', 2865, 5),
+(14, 'Zambie', 1245, 2),
+(15, 'Zambie', 3250, 7);
 
 -- --------------------------------------------------------
 
@@ -58,7 +64,7 @@ INSERT INTO `destination` (`id`, `location`, `price`, `tour_operator_id`) VALUES
 CREATE TABLE `destionationdetail` (
   `id` int(11) NOT NULL,
   `location` varchar(255) COLLATE utf8_bin NOT NULL,
-  `img` varchar(255) COLLATE utf8_bin NOT NULL,
+  `img` varchar(255) COLLATE utf8_bin DEFAULT NULL,
   `title` varchar(255) COLLATE utf8_bin DEFAULT NULL,
   `description` varchar(255) COLLATE utf8_bin DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
@@ -74,7 +80,11 @@ INSERT INTO `destionationdetail` (`id`, `location`, `img`, `title`, `description
 (4, 'Tunis', 'https://www.voyage-tunisie.info/wp-content/uploads/2017/11/tunis3.jpg', 'Culture et sable fin...', 'Entre plages de rêve et trésors architecturaux,à la recherche d\'un séjour détente...'),
 (5, 'Mars', 'https://file1.science-et-vie.com/var/scienceetvie/storage/images/1/1/6/116656/l-incroyable-conquete-mars.jpg?alias=original', 'Avec Rover', 'Explorer la planète Mars devient possible pour tout le monde'),
 (6, 'Belize', 'https://ibp.info6tm.fr/api/v1/files/61e69209d286c2751d649a36/methodes/article/image.jpg', 'Un paradis méconnu', 'Une destination idéale pour ceux qui souhaitent un combiné entre culture maya, intense nature tropicale et découvertes sous-marines sur la barrière de corail.'),
-(7, 'Seychelles', 'https://www.jet-lag-trips.com/wp-content/uploads/2016/09/Voyage-aux-Seychelles-1280x720.jpg', 'Entre terre et mer', 'Un chapelet de 92 îles posées sur l\'océan indien d’un bleu transparent baignant les plus belles plages de sable fin de notre planète.');
+(7, 'Seychelles', 'https://www.jet-lag-trips.com/wp-content/uploads/2016/09/Voyage-aux-Seychelles-1280x720.jpg', 'Entre terre et mer', 'Un chapelet de 92 îles posées sur l\'océan indien d’un bleu transparent baignant les plus belles plages de sable fin de notre planète.'),
+(8, 'Islande', 'https://mytriplan.travel/wp-content/uploads/2018/07/Islande-Kirkjufell-scaled-e1585049398887.jpeg', 'Terre de feu et de glace', NULL),
+(9, 'Japon', 'https://nouvelles.paxeditions.com/storage/app/uploads/public/606/cd2/be0/thumb_110473_1200_1_0_0_auto.jpg', 'L’Empire du Soleil Levant', NULL),
+(10, 'Antarctique', 'https://www.stras.info/wp-content/uploads/2016/10/pole-nord.jpg', 'Jusqu\'au bout du monde', NULL),
+(11, 'Zambie', 'https://www.allibert-trekking.com/iconographie/25/PA1_zambie.jpeg', 'Le safari de vos envies', NULL);
 
 -- --------------------------------------------------------
 
@@ -164,13 +174,13 @@ ALTER TABLE `tour_operator`
 -- AUTO_INCREMENT pour la table `destination`
 --
 ALTER TABLE `destination`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT pour la table `destionationdetail`
 --
 ALTER TABLE `destionationdetail`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT pour la table `review`

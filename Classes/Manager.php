@@ -192,6 +192,19 @@ class Manager
 
     }
 
+    function isDestinationKnown($destination){
+        $req=$this->db->getPDO()->prepare('SELECT location FROM destionationdetail ' );
+        $req->execute();
+        $fetched=$req->fetchAll();
+        foreach ($fetched as $key => $value) {
+            if (in_array($destination,$value)) {
+                return true;
+            }
+        }
+        return false;
+        
+    }
+
 
 
 
