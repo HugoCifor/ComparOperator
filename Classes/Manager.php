@@ -145,21 +145,7 @@ class Manager
         return $TO;    
     }
 
-    function creatNewOffer($newOffer){
-        
-        
-        $TOinfo=$this->getTOInfoByMethod($newOffer['TOname'],'TO');
-        $newarray = array(
-            'location'=>$newOffer['destName'],
-            'price'=>$newOffer['destPrice'],
-            'tour_operator_id'=>$TOinfo['id']
-        );
-
-        $newDest= new Destination($newarray);
-        $newDest-> createNewDest();
-
-
-    }
+   
 
     function updatePremium($updateP)
     {
@@ -189,6 +175,30 @@ class Manager
                 $req -> execute([$name]);
                 $result=$req->fetch();
         return $result;
+
+    }
+
+
+
+    function creatNewOffer($newOffer){
+        
+        if (!($this->isDestinationKnown($newOffer['destName']))) {
+            $newDetail= new Destinationdetail($newOffer['destName']);
+            $newDetail-> createNewDest();
+        }else{
+
+        }
+
+        $TOinfo=$this->getTOInfoByMethod($newOffer['TOname'],'TO');
+            $newarray = array(
+                'location'=>$newOffer['destName'],
+                'price'=>$newOffer['destPrice'],
+                'tour_operator_id'=>$TOinfo['id']
+            );
+        
+            $newDest= new Destination($newarray);
+            $newDest-> createNewDest();
+
 
     }
 
