@@ -71,6 +71,9 @@ include './config/autoload.php';
         </div>
     </section>
 <main>
+
+    <?php include('./utilities/cardsdisplaying.php') ; ?>
+
     <section >
         <div id="card" style="background-image: url(https://www.alibabuy.com/photos/library/1500/11411.jpg);">  
             <div class="box-container">
@@ -84,9 +87,10 @@ include './config/autoload.php';
                         </div>
                         <div class="flip-box-back text-center" style="background-image: url('https://media.istockphoto.com/illustrations/background-blue-light-soft-abstract-website-wallpaper-illustration-id1329666470?k=20&m=1329666470&s=612x612&w=0&h=WjF1mgbJrTzQfKGL8B2iaKH-Y2Q9--NVwArM58VEN7E=');">
                             <div class="inner color-white">
-                                <h3 class="flip-box-header">"rom-antique"</h3>
-                                <p>Civilisations antiques et modernes dans cette métropole vieille de 2 500 ans.</p>
-                                <button type="button" href="http://localhost/comparoperator/selected_destination.php?dest=Rome" target="_blank" class="flip-box-button">découvrir</button>
+                                <h3 class="flip-box-header"><?=$datacard1["title"]?></h3>
+                                <p><?=$datacard1["description"]?></p>
+                                <button  onclick="document.location.href='selected_destination.php?dest=<?=$datacard1['location']?>';" class="flip-box-button">découvrir</button>
+
                             </div>
                         </div>
                     </div>
@@ -101,9 +105,9 @@ include './config/autoload.php';
                         </div>
                         <div class="flip-box-back text-center" style="background-image: url('https://media.istockphoto.com/illustrations/background-blue-light-soft-abstract-website-wallpaper-illustration-id1329666470?k=20&m=1329666470&s=612x612&w=0&h=WjF1mgbJrTzQfKGL8B2iaKH-Y2Q9--NVwArM58VEN7E=');">
                             <div class="inner color-white">
-                            <h3 class="flip-box-header">Hello...</h3>
-                            <p> On vous emmène dans les coins les plus insolites de Londres</p>
-                            <button class="flip-box-button">découvrir</button>
+                            <h3 class="flip-box-header"><?=$datacard2["title"]?></h3>
+                            <p> <?=$datacard2["description"]?></p>
+                            <button onclick="document.location.href='selected_destination.php?dest=<?=$datacard2['location']?>';" class="flip-box-button">découvrir</button>
                         </div>
                     </div>
                 </div>
@@ -118,9 +122,9 @@ include './config/autoload.php';
                     </div>
                     <div class="flip-box-back text-center" style="background-image: url('https://media.istockphoto.com/illustrations/background-blue-light-soft-abstract-website-wallpaper-illustration-id1329666470?k=20&m=1329666470&s=612x612&w=0&h=WjF1mgbJrTzQfKGL8B2iaKH-Y2Q9--NVwArM58VEN7E=');">
                         <div class="inner color-white">
-                            <h3 class="flip-box-header">La principauté du Rocher </h3>
-                            <p> Enclavée en côte d’Azur, c'est un lieu de villégiature privilégié de la Jet-Set.</p>
-                            <button class="flip-box-button">découvrir</button>
+                            <h3 class="flip-box-header"><?=$datacard3["title"]?></h3>
+                            <p> <?=$datacard3["description"]?></p>
+                            <button onclick="document.location.href='selected_destination.php?dest=<?=$datacard3['location']?>';" class="flip-box-button">découvrir</button>
                         </div>
                     </div>
                 </div>
@@ -135,9 +139,9 @@ include './config/autoload.php';
                     </div>
                     <div class="flip-box-back text-center" style="background-image: url('https://media.istockphoto.com/illustrations/background-blue-light-soft-abstract-website-wallpaper-illustration-id1329666470?k=20&m=1329666470&s=612x612&w=0&h=WjF1mgbJrTzQfKGL8B2iaKH-Y2Q9--NVwArM58VEN7E=');">
                         <div class="inner color-white">
-                            <h3 class="flip-box-header">Culture et sable fin...</h3>
-                            <p>Entre plages de rêve et trésors architecturaux,à la recherche d'un séjour détente...</p>
-                            <button class="flip-box-button">découvrir</button>
+                            <h3 class="flip-box-header"><?=$datacard4["title"]?></h3>
+                            <p><?=$datacard4["description"]?></p>
+                            <button onclick="document.location.href='selected_destination.php?dest=<?=$datacard4['location']?>';" class="flip-box-button" href>découvrir</button>
                         </div>
                     </div>
                 </div>
@@ -152,9 +156,9 @@ include './config/autoload.php';
                     </div>
                     <div class="flip-box-back text-center" style="background-image: url('https://media.istockphoto.com/illustrations/background-blue-light-soft-abstract-website-wallpaper-illustration-id1329666470?k=20&m=1329666470&s=612x612&w=0&h=WjF1mgbJrTzQfKGL8B2iaKH-Y2Q9--NVwArM58VEN7E=');">
                         <div class="inner color-white">
-                            <h3 class="flip-box-header">Avec Rover</h3>
-                            <p>Explorer la planète Mars devient possible pour tout le monde</p>
-                            <button class="flip-box-button">découvrir</button>
+                            <h3 class="flip-box-header"><?=$datacard5["title"]?></h3>
+                            <p><?=$datacard5["description"]?></p>
+                            <button onclick="document.location.href='selected_destination.php?dest=<?=$datacard5['location']?>';" class="flip-box-button">découvrir</button>
                         </div>
                     </div>
                 </div>
