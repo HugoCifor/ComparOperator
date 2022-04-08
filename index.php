@@ -90,7 +90,7 @@ include './config/autoload.php';
                             <div class="inner color-white">
                                 <h3 class="flip-box-header"><?=$datacard1["title"]?></h3>
                                 <p><?=$datacard1["description"]?></p>
-                                <button  class="flip-box-button">découvrir</button>
+                                <button  onclick="document.location.href='selected_destination.php?dest=<?=$datacard1['location']?>';" class="flip-box-button">découvrir</button>
                             </div>
                         </div>
                     </div>
@@ -108,7 +108,7 @@ include './config/autoload.php';
                             <div class="inner color-white">
                             <h3 class="flip-box-header"><?=$datacard2["title"]?></h3>
                             <p> <?=$datacard2["description"]?></p>
-                            <button class="flip-box-button">découvrir</button>
+                            <button onclick="document.location.href='selected_destination.php?dest=<?=$datacard2['location']?>';" class="flip-box-button">découvrir</button>
                         </div>
                     </div>
                 </div>
@@ -127,7 +127,7 @@ include './config/autoload.php';
                         <div class="inner color-white">
                             <h3 class="flip-box-header"><?=$datacard3["title"]?></h3>
                             <p> <?=$datacard3["description"]?></p>
-                            <button class="flip-box-button">découvrir</button>
+                            <button onclick="document.location.href='selected_destination.php?dest=<?=$datacard3['location']?>';" class="flip-box-button">découvrir</button>
                         </div>
                     </div>
                 </div>
@@ -146,7 +146,7 @@ include './config/autoload.php';
                         <div class="inner color-white">
                             <h3 class="flip-box-header"><?=$datacard4["title"]?></h3>
                             <p><?=$datacard4["description"]?></p>
-                            <button class="flip-box-button">découvrir</button>
+                            <button onclick="document.location.href='selected_destination.php?dest=<?=$datacard4['location']?>';" class="flip-box-button" href>découvrir</button>
                         </div>
                     </div>
                 </div>
@@ -165,7 +165,7 @@ include './config/autoload.php';
                         <div class="inner color-white">
                             <h3 class="flip-box-header"><?=$datacard5["title"]?></h3>
                             <p><?=$datacard5["description"]?></p>
-                            <button class="flip-box-button">découvrir</button>
+                            <button onclick="document.location.href='selected_destination.php?dest=<?=$datacard5['location']?>';" class="flip-box-button">découvrir</button>
                         </div>
                     </div>
                 </div>
