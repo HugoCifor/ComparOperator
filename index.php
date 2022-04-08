@@ -6,7 +6,7 @@ include './config/autoload.php';
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -14,193 +14,191 @@ include './config/autoload.php';
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <title>comparOperator</title>
 </head>
-
 <body id="body">
-    <nav id="navbar"class="flex flex-row items-center"style="background-image: url(https://sacavoyage.fr/wp-content/uploads/AAAAAAA.jpg);">
-        <span class=" ">HS Company</span>
-            <ul class="flex flex-row text-white font-normal text-lg">
-            </ul>
-        </nav>
-<?php
-$classe = new Manager();
-$info = $classe ->getDestinationNames();
-
-?>
-
-    <img id="logo1"src="./images/logo3.png" alt="">
-<header id="header">  
-    <img id="logo2"src="./images/logo2.png" alt="">
-    <nav id="navbar"class="flex flex-row items-center justify-between">
+    <?php
+        $classe = new Manager();
+        $info = $classe ->getDestinationNames();
+        ?> 
+    <nav id="navbar"class="flex flex-row items-center ">
+        <img id="logo1" src="./images/logo1.png" class=" " >
+        <img id="logo2" src="./images/logo2.png" >
+    </nav>
+    <section id="chooseDestination" class="text-center ">
         <ul id="destination" class="flex flex-row text-white font-normal text-lg">
-            <li class="mx-2 p-2 rounded-white ease-in-out transition duration-500 ease-in-out">
+            <li class="mx-2 p-2 rounded ease-in-out transition duration-500 ease-in-out">
                 <form action="./selected_destination.php" method="get">
-                    <select id="select" name="dest" size="1" class="rounded flex flex-row text-black text-lg ">
+                    <select id="select" name="dest" size="1" class="rounded flex flex-row text-gray-600 text-2xl italic ">
                         <?php foreach ($info as $key => $value) { ?> 
                             <option href=<?=$value?> ><?=$value?> </option> <?php
                         } ?>  
-                    </select>
-                    <button type="submit" class="text-black">Valider</button>
+                    </select><br>
+                    <button type="submit" id="btnNav" class="text-gray-700 rounded bg-white text-xl italic">Valider</button>
                 </form>
-
             </li>
         </ul>
-    </nav>
+    </section>      
     <section >   
-     
-    <div id="sliderSettings" class=" ">
-        <div id="pSlider" class="pSlider">
-            <ol id="slider-container"class="slider-container" dir="ltr">
-                <li id="slide_1" class="li_slide">
-                    <div class="slide-snapper"></div>
-                    <a class="prev_slide" href="#slide_1" src=""></a> 
-                    <a class="next_slide" href="#slide_2" src=""></a> 
-                </li>
-                <li id="slide_2" class="li_slide">
-                    <div class="slide-snapper"></div>
-                    <a class="prev_slide" href="#slide_2"></a> 
-                    <a class="next_slide" href="#slide_3" ></a> 
-                </li>
-                <li id="slide_3" class="li_slide">
-                    <div class="slide-snapper"></div>
-                    <a class="prev_slide" href="#slide_3"></a> 
-                    <a class="next_slide" href="#slide_4"></a> 
-                </li>
-                <li id="slide_4" class="li_slide">
-                    <div  class="slide-snapper"></div>
-                    <a class="prev_slide" href="#slide_4"></a>
-                    <a class="next_slide" href="#slide_5"></a> 
-                </li>
-                <li id="slide_5" class="li_slide">
-                    <div  class="slide-snapper"></div>
-                    <a class="prev_slide" href="#slide_5"></a>
-                    <a class="next_slide" href="#slide_1"></a> 
-                </li>
-            </ol>
+       <div id="sliderSettings" class=" ">
+            <div id="pSlider" class="pSlider">
+                <ol id="slider-container"class="slider-container" dir="ltr">
+                    <li id="slide_1" class="li_slide">
+                        <div class="slide-snapper"></div>
+                        <a class="prev_slide" href="#slide_1" src=""></a> 
+                        <a class="next_slide" href="#slide_2" src=""></a> 
+                    </li>
+                    <li id="slide_2" class="li_slide">
+                        <div class="slide-snapper"></div>
+                        <a class="prev_slide" href="#slide_2"></a> 
+                        <a class="next_slide" href="#slide_3" ></a> 
+                    </li>
+                    <li id="slide_3" class="li_slide">
+                        <div class="slide-snapper"></div>
+                        <a class="prev_slide" href="#slide_3"></a> 
+                        <a class="next_slide" href="#slide_4"></a> 
+                    </li>
+                    <li id="slide_4" class="li_slide">
+                        <div  class="slide-snapper"></div>
+                        <a class="prev_slide" href="#slide_4"></a>
+                        <a class="next_slide" href="#slide_5"></a> 
+                    </li>
+                    <li id="slide_5" class="li_slide">
+                        <div  class="slide-snapper"></div>
+                        <a class="prev_slide" href="#slide_5"></a>
+                        <a class="next_slide" href="#slide_1"></a> 
+                    </li>
+                </ol>
+            </div>
         </div>
-    </div>
-<script src="./JS/main.js"></script>
-</body>
-
-
     </section>
-
-</header>
-<section>
-
-</section>
 <main>
-<section>
-    <div id="card" style="background-image: url(https://www.alibabuy.com/photos/library/1500/11411.jpg);">  
-        <div class="box-container">
-	        <div class="box-item">
-                <div class="flip-box">
-                    <div class="flip-box-front text-center" style="background-image: url('https://www.voyageur-independant.com/wp-content/uploads/quel-city-pass-pour-rome.jpg');">
-                        <div class="inner color-white">
-                            <h3  id="h3" class="flip-box-header  text-black font-serif italic text-5xl ">Rome</h3>
-                            <p class="text-black"></p>
+    <?php include('./utilities/cardsdisplaying.php') ;
+    var_dump($card1datas);
+    ?>
+    <section >
+        <div id="card" style="background-image: url(https://www.alibabuy.com/photos/library/1500/11411.jpg);">  
+        
+            <div class="box-container">
+	            <div class="box-item">
+                    <div class="flip-box">
+                        <div class="flip-box-front text-center" style="background-image: url(<?=$datacard1["img"]?>);">
+                            <div class="inner color-white">
+                                <h3  id="h3" class="flip-box-header  text-black font-serif italic text-5xl "><?=$datacard1["location"]?></h3>
+                                <p class="text-black"></p>
+                            </div>
+                        </div>
+                        <div class="flip-box-back text-center" style="background-image: url('https://media.istockphoto.com/illustrations/background-blue-light-soft-abstract-website-wallpaper-illustration-id1329666470?k=20&m=1329666470&s=612x612&w=0&h=WjF1mgbJrTzQfKGL8B2iaKH-Y2Q9--NVwArM58VEN7E=');">
+                            <div class="inner color-white">
+                                <h3 class="flip-box-header"><?=$datacard1["title"]?></h3>
+                                <p><?=$datacard1["description"]?></p>
+                                <button  class="flip-box-button">découvrir</button>
+                            </div>
                         </div>
                     </div>
-                    <div class="flip-box-back text-center" style="background-image: url('https://media.istockphoto.com/illustrations/background-blue-light-soft-abstract-website-wallpaper-illustration-id1329666470?k=20&m=1329666470&s=612x612&w=0&h=WjF1mgbJrTzQfKGL8B2iaKH-Y2Q9--NVwArM58VEN7E=');">
-                        <div class="inner color-white">
-                            <h3 class="flip-box-header">"rom-antique"</h3>
-                            <p>Civilisations antiques et modernes dans cette métropole vieille de 2 500 ans.</p>
+	            </div>
+
+	            <div class="box-item">
+                    <div class="flip-box">
+                        <div class="flip-box-front text-center" style="background-image: url('<?=$datacard2["img"]?>');">
+                            <div  class="inner color-white">
+                                <h3 id="h3" class="flip-box-header text-black font-serif italic text-5xl "><?=$datacard2["location"]?></h3>
+                                <p class="text-black"></p>
+                            </div>
+                        </div>
+                        <div class="flip-box-back text-center" style="background-image: url('https://media.istockphoto.com/illustrations/background-blue-light-soft-abstract-website-wallpaper-illustration-id1329666470?k=20&m=1329666470&s=612x612&w=0&h=WjF1mgbJrTzQfKGL8B2iaKH-Y2Q9--NVwArM58VEN7E=');">
+                            <div class="inner color-white">
+                            <h3 class="flip-box-header"><?=$datacard2["title"]?></h3>
+                            <p> <?=$datacard2["description"]?></p>
                             <button class="flip-box-button">découvrir</button>
                         </div>
                     </div>
                 </div>
 	        </div>
+
+
 	        <div class="box-item">
                 <div class="flip-box">
-                    <div class="flip-box-front text-center" style="background-image: url('https://cdn2.civitatis.com/reino-unido/londres/guia/camden-town.jpg');">
-                        <div  class="inner color-white">
-                            <h3 id="h3" class="flip-box-header text-black font-serif italic text-5xl ">Londres</h3>
-                            <p class="text-black"></p>
-                        </div>
-                    </div>
-                    <div class="flip-box-back text-center" style="background-image: url('https://media.istockphoto.com/illustrations/background-blue-light-soft-abstract-website-wallpaper-illustration-id1329666470?k=20&m=1329666470&s=612x612&w=0&h=WjF1mgbJrTzQfKGL8B2iaKH-Y2Q9--NVwArM58VEN7E=');">
+                    <div class="flip-box-front text-center filter-" style="background-image: url('<?=$datacard3["img"]?>');">
                         <div class="inner color-white">
-                            <h3 class="flip-box-header">Hello...</h3>
-                            <p> On vous emmène dans les coins les plus insolites de Londres</p>
-                            <button class="flip-box-button">découvrir</button>
-                        </div>
-                    </div>
-                </div>
-	        </div>
-	        <div class="box-item">
-                <div class="flip-box">
-                    <div class="flip-box-front text-center filter-" style="background-image: url('https://img.ev.mu/images/portfolio/villes/40699/1605x1070/297766.jpg');">
-                        <div class="inner color-white">
-                            <h3 id="h3" class="flip-box-header text-black font-serif italic text-5xl ">Monaco</h3>
+                            <h3 id="h3" class="flip-box-header text-black font-serif italic text-5xl "><?=$datacard3["location"]?></h3>
                             <p></p>
                         </div>
                     </div>
                     <div class="flip-box-back text-center" style="background-image: url('https://media.istockphoto.com/illustrations/background-blue-light-soft-abstract-website-wallpaper-illustration-id1329666470?k=20&m=1329666470&s=612x612&w=0&h=WjF1mgbJrTzQfKGL8B2iaKH-Y2Q9--NVwArM58VEN7E=');">
                         <div class="inner color-white">
-                            <h3 class="flip-box-header">La principauté du Rocher </h3>
-                            <p> Enclavée en côte d’Azur, c'est un lieu de villégiature privilégié de la Jet-Set.</p>
+                            <h3 class="flip-box-header"><?=$datacard3["title"]?></h3>
+                            <p> <?=$datacard3["description"]?></p>
                             <button class="flip-box-button">découvrir</button>
                         </div>
                     </div>
                 </div>
 	        </div>
+
+
             <div class="box-item">
                 <div class="flip-box">
-                    <div class="flip-box-front text-center filter-" style="background-image: url('https://www.voyage-tunisie.info/wp-content/uploads/2017/11/tunis3.jpg');">
+                    <div class="flip-box-front text-center filter-" style="background-image: url('<?=$datacard4["img"]?>');">
                         <div class="inner color-white">
-                            <h3 id="h3" class="flip-box-header text-black font-serif italic text-5xl ">Tunis</h3>
+                            <h3 id="h3" class="flip-box-header text-black font-serif italic text-5xl "><?=$datacard4["location"]?></h3>
                             <p></p>
                         </div>
                     </div>
                     <div class="flip-box-back text-center" style="background-image: url('https://media.istockphoto.com/illustrations/background-blue-light-soft-abstract-website-wallpaper-illustration-id1329666470?k=20&m=1329666470&s=612x612&w=0&h=WjF1mgbJrTzQfKGL8B2iaKH-Y2Q9--NVwArM58VEN7E=');">
                         <div class="inner color-white">
-                            <h3 class="flip-box-header">Culture et sable fin...</h3>
-                            <p>Entre plages de rêve et trésors architecturaux,à la recherche d'un séjour détente...</p>
+                            <h3 class="flip-box-header"><?=$datacard4["title"]?></h3>
+                            <p><?=$datacard4["description"]?></p>
                             <button class="flip-box-button">découvrir</button>
                         </div>
                     </div>
                 </div>
 	        </div>
+
+
             <div class="box-item">
                 <div class="flip-box">
-                    <div class="flip-box-front text-center filter-" style="background-image: url('https://file1.science-et-vie.com/var/scienceetvie/storage/images/1/1/6/116656/l-incroyable-conquete-mars.jpg?alias=original');">
+                    <div class="flip-box-front text-center filter-" style="background-image: url('<?=$datacard5["img"]?>');">
                         <div class="inner color-white">
-                            <h3 id="h3" class="flip-box-header text-black font-serif italic text-5xl ">Mars</h3>
+                            <h3 id="h3" class="flip-box-header text-black font-serif italic text-5xl "><?=$datacard5["location"]?></h3>
                             <p></p>
                         </div>
                     </div>
                     <div class="flip-box-back text-center" style="background-image: url('https://media.istockphoto.com/illustrations/background-blue-light-soft-abstract-website-wallpaper-illustration-id1329666470?k=20&m=1329666470&s=612x612&w=0&h=WjF1mgbJrTzQfKGL8B2iaKH-Y2Q9--NVwArM58VEN7E=');">
                         <div class="inner color-white">
-                            <h3 class="flip-box-header">Avec Rover</h3>
-                            <p>Explorer la planète Mars devient possible pour tout le monde</p>
+                            <h3 class="flip-box-header"><?=$datacard5["title"]?></h3>
+                            <p><?=$datacard5["description"]?></p>
                             <button class="flip-box-button">découvrir</button>
                         </div>
                     </div>
                 </div>
 	        </div>
         </div>
+
+
+
     </section>
 </main>
-<footer id="footer">
-    <img id="logofooter"src="./images/logo.PNG" alt="">
-    <img id="logofooter"src="./images/logo3.PNG" alt="">
-<form id="notes" action="" method="post">
-        <div>
-            <label for="titre">Titre</label>
-            <input type="text" name="titre">
+
+
+
+<footer id="footer" class="align-content text-white text-center font-medium p-10 ">
+        <div class="flex flex-row ">
+            <a href="#top"><img id="butTop" class="w-12 " src="./images/Capture.PNG" alt="Retour en haut"></a>
         </div>
-        <div>
-            <label for="commentaire">Commentaire</label>
-            <textarea name="comment" id="commentaire"></textarea>
+        <div class="flex flex-row justify-around ">
+            <div id="developpement">
+                <h3>Développement :</h3><br>SARL ANTHEDESIGN<br>Adresse : 12 Rue du Huit Mai 1945, 60350 ATTICHY<br>Site Web : www.anthedesign.fr
+            </div>
+            <div id="hebergement">
+                <h3>Hébergement :</h3><br>Hébergeur : SARL ANTHEDESIGN<br>12 Rue du Huit Mai 1945, 60350 ATTICHY<br>Site Web : www.anthedesign.fr
+            </div>        
+            <div id="editor">
+                <h3>Éditeur du Site :</h2><br>SARL ANTHEDESIGN Numéro de SIRET : 75221735600027<br>Responsable éditorial : Hugo ESSIQUE<br>12 Rue du Huit Mai 1945, 60350 ATTICHY<br>Téléphone : 09 72 21 25 07<br>Email : contact@anthedesign.fr<br>Site Web : www.anthedesign.fr
+            </div>
         </div>
-        <div class="stars">
-            <i class="lar la-star" data-value="1"></i><i class="lar la-star" data-value="2"></i><i class="lar la-star" data-value="3"></i><i class="lar la-star" data-value="4"></i><i class="lar la-star" data-value="5"></i>
+	    <div><br>
+            <div id="label" class="text-center text-gray-900">DEVEAUX Sarah & LAMURE Hugo _2022</div> 
         </div>
-        <input type="hidden" name="note" id="note" value="0">
-        <button type="submit">Valider</button>
-    </form>
-</footer>
-</body>
+    </footer> 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <script src="/JS/main.js"></script>
-
+</body>
 </html>

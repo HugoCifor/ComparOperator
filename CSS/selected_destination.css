@@ -1,0 +1,89 @@
+#body{
+    background-color: rgba(22, 145, 197);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#logo1{
+  
+
+}
+#titledestination{
+    margin-top: 5vw;
+    margin-left: 43vw;
+}
+h3{
+    margin-top: 10vw;
+    margin-left: 10vw;
+}
+.TOtoDest{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.TONotes{ 
+    margin-left: 15px;
+    display: flex;
+
+ 
+}
+.TONotes{
+    display: flex;
+    flex-direction: column;
+
+}
+.notesStars{
+    display: flex;
+    flex-direction: row;
+    border : 2px solid rgb(0, 255, 242);
+
+    
+}
+.star{
+    height: 15px;
+}
+
+.stars{
+    width :100px;
+    
+
+}
+.note{
+    margin-left: 10px;
+}
+/* test */
+#body{
+    background-color: rgba(22, 145, 197);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#logo1{
+    margin-top: 10vw;
+    margin-left: 10vw;
+}
+
+footer,#footer{
+    margin-bottom: 0px;
+    margin-top: 90px;
+}
+
+
+ 
+
+  footer{
+      background-size: cover;
+      background-color:rgba(22, 145, 197);
+  }
+  #butTop{
+    overflow: hidden;
+    bottom:  0;
+    right: 0;
+    justify-content:end;
+    margin-block: 10px;
+    position: fixed;
+}

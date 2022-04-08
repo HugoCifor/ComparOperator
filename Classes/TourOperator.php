@@ -63,6 +63,10 @@ class TourOperator
     function getGrade()
     {
 
+        $grade = $this->gradeTotal / $this->gradeCount;
+        return $grade;
+
+
     
         if ($this->gradeCount>0) {
             $grade = $this->gradeTotal / $this->gradeCount;
@@ -70,8 +74,6 @@ class TourOperator
         }else{
             return 0;
         }
-
-
 
     }
 
