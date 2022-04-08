@@ -15,26 +15,28 @@ include './config/autoload.php';
     <title>comparOperator</title>
 </head>
 <body id="body">
-<?php
+    <?php
         $classe = new Manager();
         $info = $classe ->getDestinationNames();
         ?> 
     <nav id="navbar"class="flex flex-row items-center ">
-        <img id="logo"src="./images/logo1.png" alt="">
-        <img id="logo"src="./images/logo2.png" alt="">
+        <img id="logo1" src="./images/logo1.png" class=" " >
+        <img id="logo2" src="./images/logo2.png" >
+    </nav>
+    <section id="chooseDestination" class="text-center ">
         <ul id="destination" class="flex flex-row text-white font-normal text-lg">
-            <li class="mx-2 p-2 rounded-white ease-in-out transition duration-500 ease-in-out">
+            <li class="mx-2 p-2 rounded ease-in-out transition duration-500 ease-in-out">
                 <form action="./selected_destination.php" method="get">
-                    <select id="select" name="dest" size="1" class="rounded flex flex-row text-blue-400 text-lg ">
+                    <select id="select" name="dest" size="1" class="rounded flex flex-row text-gray-600 text-2xl italic ">
                         <?php foreach ($info as $key => $value) { ?> 
                             <option href=<?=$value?> ><?=$value?> </option> <?php
                         } ?>  
                     </select><br>
-                    <button type="submit" class="text-blue-400 rounded border-solid bg-white hover:bg-gray-400 ">Valider</button>
+                    <button type="submit" id="btnNav" class="text-gray-700 rounded bg-white text-xl italic">Valider</button>
                 </form>
             </li>
         </ul>
-    </nav>
+    </section>      
     <section >   
        <div id="sliderSettings" class=" ">
             <div id="pSlider" class="pSlider">
@@ -69,7 +71,7 @@ include './config/autoload.php';
         </div>
     </section>
 <main>
-    <section>
+    <section >
         <div id="card" style="background-image: url(https://www.alibabuy.com/photos/library/1500/11411.jpg);">  
             <div class="box-container">
 	            <div class="box-item">
@@ -160,9 +162,25 @@ include './config/autoload.php';
         </div>
     </section>
 </main>
-<footer class="bg-">
-
-</footer>
+<footer id="footer" class="align-content text-white text-center font-medium p-10 ">
+        <div class="flex flex-row ">
+            <a href="#top"><img id="butTop" class="w-12 " src="./images/Capture.PNG" alt="Retour en haut"></a>
+        </div>
+        <div class="flex flex-row justify-around ">
+            <div id="developpement">
+                <h3>Développement :</h3><br>SARL ANTHEDESIGN<br>Adresse : 12 Rue du Huit Mai 1945, 60350 ATTICHY<br>Site Web : www.anthedesign.fr
+            </div>
+            <div id="hebergement">
+                <h3>Hébergement :</h3><br>Hébergeur : SARL ANTHEDESIGN<br>12 Rue du Huit Mai 1945, 60350 ATTICHY<br>Site Web : www.anthedesign.fr
+            </div>        
+            <div id="editor">
+                <h3>Éditeur du Site :</h2><br>SARL ANTHEDESIGN Numéro de SIRET : 75221735600027<br>Responsable éditorial : Hugo ESSIQUE<br>12 Rue du Huit Mai 1945, 60350 ATTICHY<br>Téléphone : 09 72 21 25 07<br>Email : contact@anthedesign.fr<br>Site Web : www.anthedesign.fr
+            </div>
+        </div>
+	    <div><br>
+            <div id="label" class="text-center text-gray-900">DEVEAUX Sarah & LAMURE Hugo _2022</div> 
+        </div>
+    </footer> 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <script src="/JS/main.js"></script>
 </body>

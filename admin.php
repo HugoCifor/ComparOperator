@@ -16,12 +16,19 @@ include './config/autoload.php';
 <body >
     <img id="logo1"src="./images/logo3.png" >
     
-<?php
-$classe = new Manager();
-$infoDest = $classe ->getDestinationNames();
-$listTO = $classe ->getAllTONames();
-?>
-<section>
+    <?php
+        $classe = new Manager();
+        $infoDest = $classe ->getDestinationNames();
+        $listTO = $classe ->getAllTONames();
+
+        if (isset($_GET['ID'])) {
+            if ($_GET['ID']=='NoOffer') {
+                echo "<script>alert(\"tous les champs ne sont pas remplis pour ajouter une offre\")</script>";
+            }elseif ($_GET['ID']=='NoOffer') {   
+            }
+        }
+    ?>
+    <section>
         <div class="box-container">
             <div class="box ">
                 <div class="AddTO">
@@ -34,14 +41,17 @@ $listTO = $classe ->getAllTONames();
                             <input type="text" name="TOLink" id="TOLink" class="rounded"><br>
                             <label class="text-xl text-white">le tour-opérateur est-il premium?</label>
                             <input type="checkbox" name="TOPremium" id="TOPremium" class="rounded"><br>
-                        
                             <div class="btn">
                                 <button id="btn" type="submit" class="text-xl text">valider</button>
                             </div>    
                         </form>
                     </div>
-</section>
-<section>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section>
         <div class="box-container">
             <div class="box">
                     <div class="info">
@@ -52,26 +62,28 @@ $listTO = $classe ->getAllTONames();
                                 <input type="text" name="DestName" id="DestName" class="rounded">
                                     <label class="text-xl text-white"> ou selectionner une destination </label>
                                     <select name="selectDest" id="destinationAddOfferDEST" class="destination rounded">
-                                    <?php foreach ($infoDest as $key => $value) { ?> 
-                                    <option value="<?=$value?>" ><?=$value?> </option> <?php
-                                    } ?> 
+                                        <?php foreach ($infoDest as $key => $value) { ?> 
+                                            <option value="<?=$value?>" ><?=$value?> </option> <?php
+                                        } ?> 
                                     </select><br>
                                     <label class="text-xl text-white" >selectionner le tour-opérateur</label>
                                     <select name="TOname" id="TOAddOfferTO" class="TO rounded">
-                                    <?php foreach ($listTO as $key => $value) { ?> 
-                                    <option value="<?=$value?>" ><?=$value?> </option> <?php
-                                    } ?> 
+                                        <?php foreach ($listTO as $key => $value) { ?> 
+                                            <option value="<?=$value?>" ><?=$value?> </option> <?php
+                                        } ?> 
                                     </select><br>
                                     <label class="text-xl text-white">Prix</label>
                                     <input type="text" name="destPrice" id="destPrice" placeholder="prix en euro €" class="rounded"><br>
                                     <div class="btn">
-                                    <button id="btn" type="submit" class="text-xl text">valider</button>
+                                        <button id="btn" type="submit" class="text-xl text">valider</button>
                                     </div>    
                             </form>
                         </div>
-                                </section>
-                                <section>
-                        <div class="box-container">
+                    </div>
+            </div>
+    </section>
+    <section>
+        <div class="box-container">
             <div class="box">
                     <div class="info">
                         <div class="SetPremium">
@@ -79,18 +91,21 @@ $listTO = $classe ->getAllTONames();
                             <form action="" method="post">
                                 <label class="text-xl text-white">selectionner le tour-opérateur</label>
                                 <select name="TOname" id="TOPremium" class="TO rounded">
-                                <?php foreach ($listTO as $key => $value) { ?> 
-                                <option href=<?=$value?> ><?=$value?> </option> <?php
-                                } ?> 
+                                    <?php foreach ($listTO as $key => $value) { ?> 
+                                        <option href=<?=$value?> ><?=$value?> </option> <?php
+                                    } ?> 
                                 </select><br>
                                 <label class="text-xl text-white">le tour-opérateur est-il premium?</label>
                                 <input type="checkbox" name="TOPremium" id="TOPremium" class="rounded"><br>
                                 <div class="btn">
-                                <button id="btn" type="submit" class="text-xl text">valider</button>
+                                    <button id="btn" type="submit" class="text-xl text">valider</button>
                                 </div>
                             </form>
                         </div>
-                            </section>
+                    </div>
+            </div>
+        </div>
+    </section>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </body>
 </html>

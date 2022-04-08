@@ -25,8 +25,6 @@ $newOffer =array(
     'destName'=>$destName
 );
 
-
-
 $offer = new Manager();
 $offer-> creatNewOffer($newOffer);
 
@@ -34,5 +32,5 @@ $offer-> creatNewOffer($newOffer);
 header('Location:../admin.php');
 
 }else{
-    echo "<script>alert(\"compléter tous les champs\")</script>";
+    header('Location:../admin.php?ID=NoOffer');
 }

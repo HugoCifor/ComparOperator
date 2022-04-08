@@ -6,14 +6,35 @@
     background-size: cover;
 }
 
-#logo{
-    margin-top: 5vh;
-    margin-left: 5vh;
-}
-select{
-    background-color:white;
+#logo1{
+    margin-top: 20vw;
+    margin-left: 10vw;
 
 }
+#logo2{
+    margin-top: 30vw;
+    margin-left: 31vw;
+}
+select{
+    
+    background-color:white;
+	box-shadow: 0 4px 15px 0 rgb(255, 255, 255);
+}
+#navbar,#chooseDestination{
+    height: 3vw;
+}
+#chooseDestination{
+    margin-top: 0vw;
+    margin-left: 68vw;
+}
+
+#btnNav:hover{
+	background-image: linear-gradient(to right, #2b99e7, rgba(255, 255, 255, 0), #ffffff00, #2b99e7);
+	box-shadow: 0 5px 18px 0 rgb(255, 255, 255);
+ color: rgb(39, 42, 44);
+}
+
+
 #sliderSettings{
     background-size: cover;
     background-position: center;
@@ -31,20 +52,24 @@ select{
 #slider{
     background-size: cover;
 }
-    #slide_1 {
-    background-size: cover;
+#slide_1 {
+        background-size: cover;
     background-image: url(https://www.voyageur-independant.com/wp-content/uploads/quel-city-pass-pour-rome.jpg);
 }
 #slide_2 {
+    background-size: cover;
     background-image: url(https://cdn2.civitatis.com/reino-unido/londres/guia/camden-town.jpg);
 }
 #slide_3 {
+    background-size: cover;
     background-image: url(https://img.ev.mu/images/portfolio/villes/40699/1605x1070/297766.jpg);
 }
 #slide_4 {
+    background-size: cover;
     background-image: url(https://www.voyage-tunisie.info/wp-content/uploads/2017/11/tunis3.jpg);
 }
 #slide_5{
+    background-size: cover;
     background-image: url(https://file1.science-et-vie.com/var/scienceetvie/storage/images/1/1/6/116656/l-incroyable-conquete-mars.jpg?alias=original);
 }
 .li_slide {
@@ -225,23 +250,6 @@ footer,img,#logo3{
     margin-top:-10px;
     margin-left: 450px;
 }
-
-html {
-    font-family: sans-serif;
-    box-sizing: border-box;
-  }
-  
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-  
-  .text-center {
-    text-align: center;
-  }
-  
-  .color-white {
-    color: #fff;
-  }
   
   .box-container {
     align-items: center;
@@ -374,3 +382,14 @@ html {
   footer{
       background-color:rgba(22, 145, 197);
   }
+  #butTop{
+    overflow: hidden;
+    bottom:  0;
+    right: 0;
+    justify-content:end;
+    margin-block: 10px;
+    position: fixed;
+}
+#label{
+    margin-right: 30vw;
+}
