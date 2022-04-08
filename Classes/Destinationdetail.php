@@ -43,5 +43,10 @@ class Destinationdetail{
         return $result;
     }
 
+    function createNewDest(){
+          $req = $this->db->getPDO()->prepare('INSERT INTO destionationdetail  (location) VALUE (?)');
+        $req->execute([ $this->location]);
+    }
+
 
 }
