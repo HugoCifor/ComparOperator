@@ -74,6 +74,7 @@ include './config/autoload.php';
     <section >
         <div id="card" style="background-image: url(https://www.alibabuy.com/photos/library/1500/11411.jpg);">  
             <div class="box-container">
+                <?php foreach ($info as $key => $value) { ?>             
 	            <div class="box-item">
                     <div class="flip-box">
                         <div class="flip-box-front text-center" style="background-image: url('https://www.voyageur-independant.com/wp-content/uploads/quel-city-pass-pour-rome.jpg');">
@@ -86,12 +87,13 @@ include './config/autoload.php';
                             <div class="inner color-white">
                                 <h3 class="flip-box-header">"rom-antique"</h3>
                                 <p>Civilisations antiques et modernes dans cette métropole vieille de 2 500 ans.</p>
-                                <button class="flip-box-button">découvrir</button>
-                            </div>
+                                <button type="button" onClick="parent.location='http://localhost/comparoperator/selected_destination.php?dest=<?=$value ?>'" target="_blank" value"" class="flip-box-button">découvrir</button>
+                            <?php } ?> 
+                        </div>                                 
                         </div>
                     </div>
 	            </div>
-	            <div class="box-item">
+	            <!-- <div class="box-item">
                     <div class="flip-box">
                         <div class="flip-box-front text-center" style="background-image: url('https://cdn2.civitatis.com/reino-unido/londres/guia/camden-town.jpg');">
                             <div  class="inner color-white">
@@ -103,7 +105,8 @@ include './config/autoload.php';
                             <div class="inner color-white">
                             <h3 class="flip-box-header">Hello...</h3>
                             <p> On vous emmène dans les coins les plus insolites de Londres</p>
-                            <button class="flip-box-button">découvrir</button>
+                            <button type="submit"  class="flip-box-button" href=<?=$value?> ><?=$value?></button> <?php foreach ($info as $key => $value) { ?> 
+                       <?php } ?></button>
                         </div>
                     </div>
                 </div>
@@ -157,7 +160,7 @@ include './config/autoload.php';
                             <button class="flip-box-button">découvrir</button>
                         </div>
                     </div>
-                </div>
+                </div> -->
 	        </div>
         </div>
     </section>
