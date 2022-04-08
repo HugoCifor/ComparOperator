@@ -83,7 +83,7 @@ include './config/autoload.php';
     </div>
     <div class="imgLocation">
         <?php
-        $imgLocation = new Image($_GET['dest']);
+        $imgLocation = new Destinationdetail($_GET['dest']);
         $imageFind = $imgLocation -> getImage();
          ?><img src=<?=$imageFind['img']?> alt="" >
 
