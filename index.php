@@ -20,14 +20,14 @@ include './config/autoload.php';
         $info = $classe ->getDestinationNames();
         ?> 
     <nav id="navbar"class="flex flex-row items-center ">
-        <img id="logo1" src="./images/logo1.png" class=" " >
-        <img id="logo2" src="./images/logo2.png" >
+        <img id="logo3" src="./images/logo3.png" class=" " >
+        <img id="logo4" src="./images/logo4.png" >
     </nav>
     <section id="chooseDestination" class="text-center ">
         <ul id="destination" class="flex flex-row text-white font-normal text-lg">
             <li class="mx-2 p-2 rounded ease-in-out transition duration-500 ease-in-out">
                 <form action="./selected_destination.php" method="get">
-                    <select id="select" name="dest" size="1" class="rounded flex flex-row text-gray-600 text-2xl italic ">
+                    <select id="select" name="dest" size="1" class="rounded flex flex-row text-gray-700 text-2xl italic ">
                         <?php foreach ($info as $key => $value) { ?> 
                             <option href=<?=$value?> ><?=$value?> </option> <?php
                         } ?>  
@@ -69,6 +69,9 @@ include './config/autoload.php';
                 </ol>
             </div>
         </div>
+    </section>
+    <section id="messageselection" class="text-3xl h-10 text-center italic bg-white text-gray-700">
+            Notre sélection du moment pour vous ... 
     </section>
 <main>
     <?php include('./utilities/cardsdisplaying.php') ; ?>
@@ -163,6 +166,11 @@ include './config/autoload.php';
 	        </div>
         </div>
     </section>
+    <section id="messageselection" class="">
+        <p class="text-3xl h-8 text-center italic bg-white text-gray-700">
+            Succombez à nos destinations pour vos prochaines vaccances ... 
+        </p>
+    </section>
     <section>
         <div id="allDestination" class="bg-white">          
         <!-- <div class="allDestination">
@@ -182,7 +190,7 @@ include './config/autoload.php';
                 <?php
             $imgLocation = new Destinationdetail($value);
             $imageFind = $imgLocation -> getImage();
-            ?><img src=<?=$imageFind['img']?> alt="" >
+            ?><img  src=<?=$imageFind['img']?> alt="" >
 
                     <div class="text">
                         <h3 href=<?=$value?>><?=$value?></h3>
