@@ -71,35 +71,35 @@ include './config/autoload.php';
         </div>
     </section>
 <main>
-
     <?php include('./utilities/cardsdisplaying.php') ; ?>
-
     <section >
         <div id="card" style="background-image: url(https://www.alibabuy.com/photos/library/1500/11411.jpg);">  
+        
             <div class="box-container">
 	            <div class="box-item">
                     <div class="flip-box">
-                        <div class="flip-box-front text-center" style="background-image: url('https://www.voyageur-independant.com/wp-content/uploads/quel-city-pass-pour-rome.jpg');">
+                        <div class="flip-box-front text-center" style="background-image: url(<?=$datacard1["img"]?>);">
                             <div class="inner color-white">
-                                <h3  id="h3" class="flip-box-header  text-black font-serif italic text-5xl ">Rome</h3>
+                                <h3  id="h3" class="flip-box-header  text-black font-serif italic text-5xl "><?=$datacard1["location"]?></h3>
                                 <p class="text-black"></p>
-                            </div>
+                            </div> 
+                            
                         </div>
                         <div class="flip-box-back text-center" style="background-image: url('https://media.istockphoto.com/illustrations/background-blue-light-soft-abstract-website-wallpaper-illustration-id1329666470?k=20&m=1329666470&s=612x612&w=0&h=WjF1mgbJrTzQfKGL8B2iaKH-Y2Q9--NVwArM58VEN7E=');">
                             <div class="inner color-white">
                                 <h3 class="flip-box-header"><?=$datacard1["title"]?></h3>
                                 <p><?=$datacard1["description"]?></p>
                                 <button  onclick="document.location.href='selected_destination.php?dest=<?=$datacard1['location']?>';" class="flip-box-button">découvrir</button>
-
                             </div>
                         </div>
                     </div>
 	            </div>
+
 	            <div class="box-item">
                     <div class="flip-box">
-                        <div class="flip-box-front text-center" style="background-image: url('https://cdn2.civitatis.com/reino-unido/londres/guia/camden-town.jpg');">
+                        <div class="flip-box-front text-center" style="background-image: url('<?=$datacard2["img"]?>');">
                             <div  class="inner color-white">
-                                <h3 id="h3" class="flip-box-header text-black font-serif italic text-5xl ">Londres</h3>
+                                <h3 id="h3" class="flip-box-header text-black font-serif italic text-5xl "><?=$datacard2["location"]?></h3>
                                 <p class="text-black"></p>
                             </div>
                         </div>
@@ -112,11 +112,13 @@ include './config/autoload.php';
                     </div>
                 </div>
 	        </div>
+
+
 	        <div class="box-item">
                 <div class="flip-box">
-                    <div class="flip-box-front text-center filter-" style="background-image: url('https://img.ev.mu/images/portfolio/villes/40699/1605x1070/297766.jpg');">
+                    <div class="flip-box-front text-center filter-" style="background-image: url('<?=$datacard3["img"]?>');">
                         <div class="inner color-white">
-                            <h3 id="h3" class="flip-box-header text-black font-serif italic text-5xl ">Monaco</h3>
+                            <h3 id="h3" class="flip-box-header text-black font-serif italic text-5xl "><?=$datacard3["location"]?></h3>
                             <p></p>
                         </div>
                     </div>
@@ -129,11 +131,13 @@ include './config/autoload.php';
                     </div>
                 </div>
 	        </div>
+
+
             <div class="box-item">
                 <div class="flip-box">
-                    <div class="flip-box-front text-center filter-" style="background-image: url('https://www.voyage-tunisie.info/wp-content/uploads/2017/11/tunis3.jpg');">
+                    <div class="flip-box-front text-center filter-" style="background-image: url('<?=$datacard4["img"]?>');">
                         <div class="inner color-white">
-                            <h3 id="h3" class="flip-box-header text-black font-serif italic text-5xl ">Tunis</h3>
+                            <h3 id="h3" class="flip-box-header text-black font-serif italic text-5xl "><?=$datacard4["location"]?></h3>
                             <p></p>
                         </div>
                     </div>
@@ -146,11 +150,13 @@ include './config/autoload.php';
                     </div>
                 </div>
 	        </div>
+
+
             <div class="box-item">
                 <div class="flip-box">
-                    <div class="flip-box-front text-center filter-" style="background-image: url('https://file1.science-et-vie.com/var/scienceetvie/storage/images/1/1/6/116656/l-incroyable-conquete-mars.jpg?alias=original');">
+                    <div class="flip-box-front text-center filter-" style="background-image: url('<?=$datacard5["img"]?>');">
                         <div class="inner color-white">
-                            <h3 id="h3" class="flip-box-header text-black font-serif italic text-5xl ">Mars</h3>
+                            <h3 id="h3" class="flip-box-header text-black font-serif italic text-5xl "><?=$datacard5["location"]?></h3>
                             <p></p>
                         </div>
                     </div>
@@ -164,8 +170,14 @@ include './config/autoload.php';
                 </div>
 	        </div>
         </div>
+
+
+
     </section>
 </main>
+
+
+
 <footer id="footer" class="align-content text-white text-center font-medium p-10 ">
         <div class="flex flex-row ">
             <a href="#top"><img id="butTop" class="w-12 " src="./images/Capture.PNG" alt="Retour en haut"></a>
