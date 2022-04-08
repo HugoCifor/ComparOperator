@@ -1,5 +1,7 @@
 <?php
 
+use LDAP\Result;
+
 class Destination
 {
     private $id;
@@ -59,6 +61,7 @@ class Destination
 
     function createNewDest()
     {
+       
         $req = $this->db->getPDO()->prepare('INSERT INTO destination (location,price,tour_operator_id) VALUE (?,?,?)');
         $req->execute([
             $this->location,
@@ -67,6 +70,8 @@ class Destination
         ]);
     }
     
+
+
 
 
     
