@@ -15,13 +15,13 @@
     margin-top: 30vw;
     margin-left: 31vw;
 }
+#navbar,#chooseDestination{
+    height: 3vw;
+}
 select{
     
     background-color:white;
-	box-shadow: 0 4px 15px 0 rgb(255, 255, 255);
-}
-#navbar,#chooseDestination{
-    height: 3vw;
+    box-shadow: 0 4px 15px 0 rgb(255, 255, 255);
 }
 #chooseDestination{
     margin-top: 0vw;
@@ -380,6 +380,7 @@ footer,img,#logo3{
   }
 
   footer{
+      background-position: center;
       background-color:rgba(22, 145, 197);
   }
   #butTop{
@@ -392,4 +393,7 @@ footer,img,#logo3{
 }
 #label{
     margin-right: 30vw;
+}
+#mentions{
+    justify-content:space-around;
 }

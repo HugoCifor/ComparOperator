@@ -170,19 +170,14 @@ include './config/autoload.php';
                 </div>
 	        </div>
         </div>
-
-
-
     </section>
 </main>
-
-
 
 <footer id="footer" class="align-content text-white text-center font-medium p-10 ">
         <div class="flex flex-row ">
             <a href="#top"><img id="butTop" class="w-12 " src="./images/Capture.PNG" alt="Retour en haut"></a>
         </div>
-        <div class="flex flex-row justify-around ">
+        <div id="mentions" class="flex flex-row justify-around ">
             <div id="developpement">
                 <h3>Développement :</h3><br>SARL ANTHEDESIGN<br>Adresse : 12 Rue du Huit Mai 1945, 60350 ATTICHY<br>Site Web : www.anthedesign.fr
             </div>
