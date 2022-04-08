@@ -1,33 +1,45 @@
 #body{
-    background-color: rgba(22, 145, 197);
-    height: 100vh;
+    background-color: #ffffff;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100vh;
 }
+#navbar{
+    background-color: #ffffff;
 
-#logo1{
+}
+#logo3{
+    background-color: #ffffff;
+
     margin-top: 20vw;
     margin-left: 10vw;
 
 }
-#logo2{
+#logo4{
+    background-color: #ffffff;
+
     margin-top: 30vw;
     margin-left: 31vw;
 }
 #navbar,#chooseDestination{
+    background-color: #ffffff;
+
     height: 3vw;
 }
 select{
-    
+    border: thick double #32a1ce;
     background-color:white;
-    box-shadow: 0 4px 15px 0 rgb(255, 255, 255);
+    box-shadow: 0 4px 15px 0 #32a1ce;
 }
 #chooseDestination{
     margin-top: 0vw;
     margin-left: 68vw;
 }
+#btnNav{
+    border: thick double #32a1ce;
 
+}
 #btnNav:hover{
 	background-image: linear-gradient(to right, #2b99e7, rgba(255, 255, 255, 0), #ffffff00, #2b99e7);
 	box-shadow: 0 5px 18px 0 rgb(255, 255, 255);
@@ -36,6 +48,7 @@ select{
 
 
 #sliderSettings{
+    background-color: #2b99e7;
     background-size: cover;
     background-position: center;
 }
@@ -241,10 +254,7 @@ select{
 #slider-width, #slider-height {
   text-align: center;
 }
-footer #footer{
-    margin-bottom: 0px;
-    margin-top: 90px;
-}
+
 
 
   
@@ -400,7 +410,7 @@ footer #footer{
   
   
   footer{
-      height: -8vw;
+      height: 8vw;
       background-position: center;
       background-color:rgba(22, 145, 197);
   }
