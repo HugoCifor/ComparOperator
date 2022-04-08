@@ -71,9 +71,7 @@ include './config/autoload.php';
         </div>
     </section>
 <main>
-    <?php include('./utilities/cardsdisplaying.php') ;
-    var_dump($card1datas);
-    ?>
+    <?php include('./utilities/cardsdisplaying.php') ; ?>
     <section >
         <div id="card" style="background-image: url(https://www.alibabuy.com/photos/library/1500/11411.jpg);">  
         
