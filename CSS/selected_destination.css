@@ -6,17 +6,22 @@
     background-size: cover;
 }
 #logo1{
-  
+    margin-top: 20vw;
+    margin-left: 10vw;
 
 }
-#titledestination{
-    margin-top: 5vw;
-    margin-left: 43vw;
+#logo2{
+    margin-top: 30vw;
+    margin-left: 31vw;
 }
-h3{
-    margin-top: 10vw;
-    margin-left: 10vw;
+#navbar,#chooseDestination{
+    height: 10vw;
 }
+.nomDeDestination{
+    margin-top: 5%;
+}
+
+
 .TOtoDest{
     display: flex;
     flex-direction: row;
@@ -67,18 +72,11 @@ h3{
     margin-left: 10vw;
 }
 
-footer,#footer{
-    margin-bottom: 0px;
-    margin-top: 90px;
+
+footer{
+    background-position: center;
+    background-color:rgba(22, 145, 197);
 }
-
-
- 
-
-  footer{
-      background-size: cover;
-      background-color:rgba(22, 145, 197);
-  }
   #butTop{
     overflow: hidden;
     bottom:  0;
