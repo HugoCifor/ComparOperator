@@ -34,12 +34,6 @@ class Manager
         return $allNames;
     }
 
-    function getOperatorByDestination()
-    {
-
-    }
-
-
     function createReview()
     {
 
@@ -58,11 +52,6 @@ class Manager
 
     }
 
-
-    function updateOperatorToPremium()
-    {
-
-    }
 
 
     function createTourOperator($newTOInfo)
@@ -156,21 +145,7 @@ class Manager
         return $TO;    
     }
 
-    function creatNewOffer($newOffer){
-        
-        
-        $TOinfo=$this->getTOInfoByMethod($newOffer['TOname'],'TO');
-        $newarray = array(
-            'location'=>$newOffer['destName'],
-            'price'=>$newOffer['destPrice'],
-            'tour_operator_id'=>$TOinfo['id']
-        );
-
-        $newDest= new Destination($newarray);
-        $newDest-> createNewDest();
-
-
-    }
+   
 
     function updatePremium($updateP)
     {
@@ -191,6 +166,53 @@ class Manager
         $newTO = new TourOperator($updateP);
         $newTO->updatePremium();
 
+    }
+
+    function prepDataForDest($name,$TOid) // passer le TO depuis la db dans la classe TO
+    {   
+        
+        $req=$this->db->getPDO()->prepare('SELECT * FROM destination WHERE location  = ? AND  	tour_operator_id ='.$TOid );
+                $req -> execute([$name]);
+                $result=$req->fetch();
+        return $result;
+
+    }
+
+
+
+    function creatNewOffer($newOffer){
+        
+        if (!($this->isDestinationKnown($newOffer['destName']))) {
+            $newDetail= new Destinationdetail($newOffer['destName']);
+            $newDetail-> createNewDest();
+        }else{
+
+        }
+
+        $TOinfo=$this->getTOInfoByMethod($newOffer['TOname'],'TO');
+            $newarray = array(
+                'location'=>$newOffer['destName'],
+                'price'=>$newOffer['destPrice'],
+                'tour_operator_id'=>$TOinfo['id']
+            );
+        
+            $newDest= new Destination($newarray);
+            $newDest-> createNewDest();
+
+
+    }
+
+    function isDestinationKnown($destination){
+        $req=$this->db->getPDO()->prepare('SELECT location FROM destionationdetail ' );
+        $req->execute();
+        $fetched=$req->fetchAll();
+        foreach ($fetched as $key => $value) {
+            if (in_array($destination,$value)) {
+                return true;
+            }
+        }
+        return false;
+        
     }
 
 

@@ -3,7 +3,7 @@
 /// selection des cartes à afficher?
 $destinationCard1 = 'Rome';
 $destinationCard2 = 'Londres';
-$destinationCard3 = 'Monaco';
+$destinationCard3 = 'Seychelles';
 $destinationCard4 = 'Tunis';
 $destinationCard5 = 'Mars';
 

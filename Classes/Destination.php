@@ -1,5 +1,7 @@
 <?php
 
+use LDAP\Result;
+
 class Destination
 {
     private $id;
@@ -67,6 +69,8 @@ class Destination
         ]);
     }
     
+
+
 
 
     

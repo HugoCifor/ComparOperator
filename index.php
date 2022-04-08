@@ -73,38 +73,36 @@ include './config/autoload.php';
 <main>
     <?php include('./utilities/cardsdisplaying.php') ; ?>
     <section >
-        <div id="card" style="background-image: url(https://www.alibabuy.com/photos/library/1500/11411.jpg);">  
-        
-            <div class="box-container">
-	            <div class="box-item">
-                    <div class="flip-box">
-                        <div class="flip-box-front text-center" style="background-image: url(<?=$datacard1["img"]?>);">
-                            <div class="inner color-white">
-                                <h3  id="h3" class="flip-box-header  text-black font-serif italic text-5xl "><?=$datacard1["location"]?></h3>
-                                <p class="text-black"></p>
-                            </div> 
-                            
-                        </div>
-                        <div class="flip-box-back text-center" style="background-image: url('https://media.istockphoto.com/illustrations/background-blue-light-soft-abstract-website-wallpaper-illustration-id1329666470?k=20&m=1329666470&s=612x612&w=0&h=WjF1mgbJrTzQfKGL8B2iaKH-Y2Q9--NVwArM58VEN7E=');">
-                            <div class="inner color-white">
-                                <h3 class="flip-box-header"><?=$datacard1["title"]?></h3>
-                                <p><?=$datacard1["description"]?></p>
-                                <button  onclick="document.location.href='selected_destination.php?dest=<?=$datacard1['location']?>';" class="flip-box-button">découvrir</button>
-                            </div>
+        <div id="card" style="background-image: url(https://www.alibabuy.com/photos/library/1500/11411.jpg);">          
+        <div class="box-container">
+	        <div class="box-item">
+                <div class="flip-box">
+                    <div class="flip-box-front text-center" style="background-image: url(<?=$datacard1["img"]?>);">
+                        <div class="inner color-white">
+                            <h3  id="h3" class="flip-box-header  text-black font-serif italic text-4xl "><?=$datacard1["location"]?></h3>
+                            <p class="text-black"></p>
+                        </div> 
+                    </div>
+                    <div class="flip-box-back text-center" style="background-image: url('https://media.istockphoto.com/illustrations/background-blue-light-soft-abstract-website-wallpaper-illustration-id1329666470?k=20&m=1329666470&s=612x612&w=0&h=WjF1mgbJrTzQfKGL8B2iaKH-Y2Q9--NVwArM58VEN7E=');">
+                        <div class="inner color-white">
+                            <h3 class="flip-box-header"><?=$datacard1["title"]?></h3>
+                            <p><?=$datacard1["description"]?></p>
+                            <button  onclick="document.location.href='selected_destination.php?dest=<?=$datacard1['location']?>';" class="flip-box-button">découvrir</button>
                         </div>
                     </div>
-	            </div>
+                </div>
+	        </div>
 
-	            <div class="box-item">
-                    <div class="flip-box">
-                        <div class="flip-box-front text-center" style="background-image: url('<?=$datacard2["img"]?>');">
-                            <div  class="inner color-white">
-                                <h3 id="h3" class="flip-box-header text-black font-serif italic text-5xl "><?=$datacard2["location"]?></h3>
-                                <p class="text-black"></p>
-                            </div>
+	        <div class="box-item">
+                <div class="flip-box">
+                    <div class="flip-box-front text-center" style="background-image: url('<?=$datacard2["img"]?>');">
+                        <div  class="inner color-white">
+                            <h3 id="h3" class="flip-box-header text-black font-serif italic text-4xl "><?=$datacard2["location"]?></h3>
+                            <p class="text-black"></p>
                         </div>
-                        <div class="flip-box-back text-center" style="background-image: url('https://media.istockphoto.com/illustrations/background-blue-light-soft-abstract-website-wallpaper-illustration-id1329666470?k=20&m=1329666470&s=612x612&w=0&h=WjF1mgbJrTzQfKGL8B2iaKH-Y2Q9--NVwArM58VEN7E=');">
-                            <div class="inner color-white">
+                    </div>
+                    <div class="flip-box-back text-center" style="background-image: url('https://media.istockphoto.com/illustrations/background-blue-light-soft-abstract-website-wallpaper-illustration-id1329666470?k=20&m=1329666470&s=612x612&w=0&h=WjF1mgbJrTzQfKGL8B2iaKH-Y2Q9--NVwArM58VEN7E=');">
+                        <div class="inner color-white">
                             <h3 class="flip-box-header"><?=$datacard2["title"]?></h3>
                             <p> <?=$datacard2["description"]?></p>
                             <button onclick="document.location.href='selected_destination.php?dest=<?=$datacard2['location']?>';" class="flip-box-button">découvrir</button>
@@ -112,13 +110,11 @@ include './config/autoload.php';
                     </div>
                 </div>
 	        </div>
-
-
 	        <div class="box-item">
                 <div class="flip-box">
                     <div class="flip-box-front text-center filter-" style="background-image: url('<?=$datacard3["img"]?>');">
                         <div class="inner color-white">
-                            <h3 id="h3" class="flip-box-header text-black font-serif italic text-5xl "><?=$datacard3["location"]?></h3>
+                            <h3 id="h3" class="flip-box-header text-black font-serif italic text-4xl "><?=$datacard3["location"]?></h3>
                             <p></p>
                         </div>
                     </div>
@@ -131,13 +127,11 @@ include './config/autoload.php';
                     </div>
                 </div>
 	        </div>
-
-
             <div class="box-item">
                 <div class="flip-box">
                     <div class="flip-box-front text-center filter-" style="background-image: url('<?=$datacard4["img"]?>');">
                         <div class="inner color-white">
-                            <h3 id="h3" class="flip-box-header text-black font-serif italic text-5xl "><?=$datacard4["location"]?></h3>
+                            <h3 id="h3" class="flip-box-header text-black font-serif italic text-4xl "><?=$datacard4["location"]?></h3>
                             <p></p>
                         </div>
                     </div>
@@ -150,13 +144,11 @@ include './config/autoload.php';
                     </div>
                 </div>
 	        </div>
-
-
             <div class="box-item">
                 <div class="flip-box">
                     <div class="flip-box-front text-center filter-" style="background-image: url('<?=$datacard5["img"]?>');">
                         <div class="inner color-white">
-                            <h3 id="h3" class="flip-box-header text-black font-serif italic text-5xl "><?=$datacard5["location"]?></h3>
+                            <h3 id="h3" class="flip-box-header text-black font-serif italic text-4xl "><?=$datacard5["location"]?></h3>
                             <p></p>
                         </div>
                     </div>
@@ -170,19 +162,43 @@ include './config/autoload.php';
                 </div>
 	        </div>
         </div>
+    </section>
+    <section>
+        <div id="allDestination" class="bg-white">          
+        <!-- <div class="allDestination">
+        <?php foreach ($info as $key => $newdest) { ?> 
+                            <div href=<?=$newdest?> ><?=$newdest?> </div> <?php
+                        } ?>  
+            <?php 
+            $newdest=new Manager();
+            $destination = $newdest->getAllDestination();
+            ?>
+        </div> -->
+       <div class="containerGrid bg-white">
+           
+           <main class="grid" >
+                <?php foreach ($info as $key => $value) { ?> 
+                <article > 
+                <?php
+            $imgLocation = new Destinationdetail($value);
+            $imageFind = $imgLocation -> getImage();
+            ?><img src=<?=$imageFind['img']?> alt="" >
 
-
-
+                    <div class="text">
+                        <h3 href=<?=$value?>><?=$value?></h3>
+                    </div>
+                </article>
+                    <?php
+                        } ?> 
+            </main>
+        </div>
     </section>
 </main>
-
-
-
 <footer id="footer" class="align-content text-white text-center font-medium p-10 ">
-        <div class="flex flex-row ">
+         <div class="flex flex-row ">
             <a href="#top"><img id="butTop" class="w-12 " src="./images/Capture.PNG" alt="Retour en haut"></a>
         </div>
-        <div class="flex flex-row justify-around ">
+       <!-- <div id="mentions" class="flex flex-row justify-around ">
             <div id="developpement">
                 <h3>Développement :</h3><br>SARL ANTHEDESIGN<br>Adresse : 12 Rue du Huit Mai 1945, 60350 ATTICHY<br>Site Web : www.anthedesign.fr
             </div>
@@ -192,10 +208,8 @@ include './config/autoload.php';
             <div id="editor">
                 <h3>Éditeur du Site :</h2><br>SARL ANTHEDESIGN Numéro de SIRET : 75221735600027<br>Responsable éditorial : Hugo ESSIQUE<br>12 Rue du Huit Mai 1945, 60350 ATTICHY<br>Téléphone : 09 72 21 25 07<br>Email : contact@anthedesign.fr<br>Site Web : www.anthedesign.fr
             </div>
-        </div>
-	    <div><br>
-            <div id="label" class="text-center text-gray-900">DEVEAUX Sarah & LAMURE Hugo _2022</div> 
-        </div>
+        </div> -->
+        <div id="label" class="text-center text-gray-900">DEVEAUX Sarah & LAMURE Hugo _2022</div> 
     </footer> 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <script src="/JS/main.js"></script>
