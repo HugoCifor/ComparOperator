@@ -36,11 +36,11 @@ if (isset($_GET['dest'])&&in_array($_GET['dest'],$control)) {
 
                 <?php foreach ($TOs as $key => $value) {
                     $set= new Manager();
-                    $donnee = $set-> prepDataForTO($value);
-                    $premium = new TourOperator($donnee);
+                    $donneeTO = $set-> prepDataForTO($value);
+                    $premium = new TourOperator($donneeTO);
                     $result = $premium->getPremium();
                     if ($result==1) {
-                        ?><div class="TO"><a href=<?=$donnee['link']?>><?=$donnee['name']?></a></div><?php 
+                        ?><div class="TO"><a href=<?=$donneeTO['link']?>><?=$donneeTO['name']?></a></div><?php 
                     }else{
                         ?><div class="TO"><?=$value?></div> <?php
                     }       
@@ -51,45 +51,56 @@ if (isset($_GET['dest'])&&in_array($_GET['dest'],$control)) {
             <div class="TONotes">
 
                 <?php foreach ($TOs as $key => $value) {
-                $set= new Manager();
-                $donnee = $set-> prepDataForTO($value);
-                $premium = new TourOperator($donnee);
-                $result = $premium->getGrade();
-                ?><div class='notesStars'>
 
-                    <?php
-                    if ($result>0) {
+                    $set= new Manager();
+                    $donneeTO = $set-> prepDataForTO($value);
+                    $donneeDEST = $set-> prepDataForDEST($_GET['dest'],$donneeTO['id']);
+                    $newDest= new Destination($donneeDEST);
+                    $price = $newDest->getPrice();
 
-                        ?><div class='stars'> <?php
+                    $premium = new TourOperator($donneeTO);
+                    $result = $premium->getGrade();
+                    ?><div class='notesStars'>
 
-                        for ($i=0; $i < $result; $i++) { 
-                            if ($result-$i>=1) {
-                               ?><img class="star"  src="./images/star.webp" alt="" srcset=""><?php
-                            }elseif ($result-$i>0) {
-                                ?><img class="star" src="./images/star-half-yellow.webp" alt="" srcset=""><?php
+                        <?php
+                        if ($result>0) {
+
+                            ?><div class='stars'> <?php
+
+                            for ($i=0; $i < $result; $i++) { 
+
+                                if ($result-$i>=1) {
+                                   ?><img class="star"  src="./images/star.webp" alt="" srcset=""><?php
+                                }elseif ($result-$i>0) {
+                                    ?><img class="star" src="./images/star-half-yellow.webp" alt="" srcset=""><?php
+                                }
+
                             }
+
+                            for ($i=0; $i <5-$result; $i++) { 
+                                ?><img class="star"  src="./images/star-line-yellow-1.webp" alt="" srcset=""><?php
+                            }?>
+                            
+                            </div>
+                            <div class="note"><?=$result?>/5</div> <?php
+                        }else {
+
+                            ?><div class="note">pas encore noté</div> <?php
                         }
-                        for ($i=0; $i <5-$result; $i++) { 
-                            ?><img class="star"  src="./images/star-line-yellow-1.webp" alt="" srcset=""><?php
-                        }
-                        ?>
 
-                        </div>
-                        <div class="note"><?=$result?>/5</div> <?php
-                    }else {
-
-                        ?><div class="note">pas encore noté</div> <?php
-                    }
-
-                ?></div><?php
-            } ?>
+                    ?></div>
+                    <div class="prix">
+                        <?=$price?>
+                    </div>
+                   <?php 
+                } ?>
             </div>
         </div>
         <div class="imgLocation">
             <?php
             $imgLocation = new Destinationdetail($_GET['dest']);
             $imageFind = $imgLocation -> getImage();
-             ?><img src=<?=$imageFind['img']?> alt="" >
+            ?><img src=<?=$imageFind['img']?> alt="" >
 
         
         </div>
