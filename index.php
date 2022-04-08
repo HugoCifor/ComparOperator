@@ -174,11 +174,10 @@ include './config/autoload.php';
             $destination = $newdest->getAllDestination();
             ?>
         </div> -->
-       <?php var_dump ($info);?>
-        <div class="containerGrid bg-white">
-        <?php foreach ($info as $key => $value) { ?> 
-                       
-            <main class="grid" >
+       <div class="containerGrid bg-white">
+           
+           <main class="grid" >
+                <?php foreach ($info as $key => $value) { ?> 
                 <article > 
                 <?php
             $imgLocation = new Destinationdetail($value);
@@ -188,9 +187,9 @@ include './config/autoload.php';
                     <div class="text">
                         <h3 href=<?=$value?>><?=$value?></h3>
                     </div>
+                </article>
                     <?php
                         } ?> 
-                </article>
             </main>
         </div>
     </section>
