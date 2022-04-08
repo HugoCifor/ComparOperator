@@ -71,9 +71,7 @@ include './config/autoload.php';
         </div>
     </section>
 <main>
-    <?php include('./utilities/cardsdisplaying.php') ;
-    var_dump($card1datas);
-    ?>
+    <?php include('./utilities/cardsdisplaying.php') ; ?>
     <section >
         <div id="card" style="background-image: url(https://www.alibabuy.com/photos/library/1500/11411.jpg);">  
         
@@ -84,13 +82,14 @@ include './config/autoload.php';
                             <div class="inner color-white">
                                 <h3  id="h3" class="flip-box-header  text-black font-serif italic text-5xl "><?=$datacard1["location"]?></h3>
                                 <p class="text-black"></p>
-                            </div>
+                            </div> 
+                            
                         </div>
                         <div class="flip-box-back text-center" style="background-image: url('https://media.istockphoto.com/illustrations/background-blue-light-soft-abstract-website-wallpaper-illustration-id1329666470?k=20&m=1329666470&s=612x612&w=0&h=WjF1mgbJrTzQfKGL8B2iaKH-Y2Q9--NVwArM58VEN7E=');">
                             <div class="inner color-white">
                                 <h3 class="flip-box-header"><?=$datacard1["title"]?></h3>
                                 <p><?=$datacard1["description"]?></p>
-                                <button  class="flip-box-button">découvrir</button>
+                                <button  onclick="document.location.href='selected_destination.php?dest=<?=$datacard1['location']?>';" class="flip-box-button">découvrir</button>
                             </div>
                         </div>
                     </div>
@@ -108,7 +107,7 @@ include './config/autoload.php';
                             <div class="inner color-white">
                             <h3 class="flip-box-header"><?=$datacard2["title"]?></h3>
                             <p> <?=$datacard2["description"]?></p>
-                            <button class="flip-box-button">découvrir</button>
+                            <button onclick="document.location.href='selected_destination.php?dest=<?=$datacard2['location']?>';" class="flip-box-button">découvrir</button>
                         </div>
                     </div>
                 </div>
@@ -127,7 +126,7 @@ include './config/autoload.php';
                         <div class="inner color-white">
                             <h3 class="flip-box-header"><?=$datacard3["title"]?></h3>
                             <p> <?=$datacard3["description"]?></p>
-                            <button class="flip-box-button">découvrir</button>
+                            <button onclick="document.location.href='selected_destination.php?dest=<?=$datacard3['location']?>';" class="flip-box-button">découvrir</button>
                         </div>
                     </div>
                 </div>
@@ -146,7 +145,7 @@ include './config/autoload.php';
                         <div class="inner color-white">
                             <h3 class="flip-box-header"><?=$datacard4["title"]?></h3>
                             <p><?=$datacard4["description"]?></p>
-                            <button class="flip-box-button">découvrir</button>
+                            <button onclick="document.location.href='selected_destination.php?dest=<?=$datacard4['location']?>';" class="flip-box-button" href>découvrir</button>
                         </div>
                     </div>
                 </div>
@@ -165,7 +164,7 @@ include './config/autoload.php';
                         <div class="inner color-white">
                             <h3 class="flip-box-header"><?=$datacard5["title"]?></h3>
                             <p><?=$datacard5["description"]?></p>
-                            <button class="flip-box-button">découvrir</button>
+                            <button onclick="document.location.href='selected_destination.php?dest=<?=$datacard5['location']?>';" class="flip-box-button">découvrir</button>
                         </div>
                     </div>
                 </div>
