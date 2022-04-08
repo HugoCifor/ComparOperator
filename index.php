@@ -165,28 +165,41 @@ include './config/autoload.php';
     </section>
     <section>
         <div id="allDestination" class="bg-white">          
-        <div class="allDestination">
+        <!-- <div class="allDestination">
         <?php foreach ($info as $key => $newdest) { ?> 
                             <div href=<?=$newdest?> ><?=$newdest?> </div> <?php
                         } ?>  
             <?php 
             $newdest=new Manager();
             $destination = $newdest->getAllDestination();
-            // var_dump($destination);
             ?>
+        </div> -->
+       <?php var_dump ($info);?>
+        <div class="containerGrid bg-white">
+        <?php foreach ($info as $key => $value) { ?> 
+                       
+            <main class="grid" >
+                <article > 
+                <?php
+            $imgLocation = new Destinationdetail($value);
+            $imageFind = $imgLocation -> getImage();
+            ?><img src=<?=$imageFind['img']?> alt="" >
+
+                    <div class="text">
+                        <h3 href=<?=$value?>><?=$value?></h3>
+                    </div>
+                    <?php
+                        } ?> 
+                </article>
+            </main>
         </div>
     </section>
-
-    
-    
-
-
 </main>
 <footer id="footer" class="align-content text-white text-center font-medium p-10 ">
-        <div class="flex flex-row ">
+         <div class="flex flex-row ">
             <a href="#top"><img id="butTop" class="w-12 " src="./images/Capture.PNG" alt="Retour en haut"></a>
         </div>
-        <div id="mentions" class="flex flex-row justify-around ">
+       <!-- <div id="mentions" class="flex flex-row justify-around ">
             <div id="developpement">
                 <h3>Développement :</h3><br>SARL ANTHEDESIGN<br>Adresse : 12 Rue du Huit Mai 1945, 60350 ATTICHY<br>Site Web : www.anthedesign.fr
             </div>
@@ -196,10 +209,8 @@ include './config/autoload.php';
             <div id="editor">
                 <h3>Éditeur du Site :</h2><br>SARL ANTHEDESIGN Numéro de SIRET : 75221735600027<br>Responsable éditorial : Hugo ESSIQUE<br>12 Rue du Huit Mai 1945, 60350 ATTICHY<br>Téléphone : 09 72 21 25 07<br>Email : contact@anthedesign.fr<br>Site Web : www.anthedesign.fr
             </div>
-        </div>
-	    <div><br>
-            <div id="label" class="text-center text-gray-900">DEVEAUX Sarah & LAMURE Hugo _2022</div> 
-        </div>
+        </div> -->
+        <div id="label" class="text-center text-gray-900">DEVEAUX Sarah & LAMURE Hugo _2022</div> 
     </footer> 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <script src="/JS/main.js"></script>
