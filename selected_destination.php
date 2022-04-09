@@ -147,3 +147,4 @@ if (isset($_GET['dest']) && in_array($_GET['dest'],$control)) {?>
 }else{
     header('location:./index.php');
 }
+

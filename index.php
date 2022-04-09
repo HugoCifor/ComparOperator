@@ -198,6 +198,7 @@ include './config/autoload.php';
                         <h3><?=$value?></h3>
                     </div>
 
+                    
                     </a>
 
                 </article>
