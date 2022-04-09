@@ -166,9 +166,7 @@ include './config/autoload.php';
     <section>
         <div id="allDestination" class="bg-white">          
         <!-- <div class="allDestination">
-        <?php foreach ($info as $key => $newdest) { ?> 
-                            <div href=<?=$newdest?> ><?=$newdest?> </div> <?php
-                        } ?>  
+
             <?php 
             $newdest=new Manager();
             $destination = $newdest->getAllDestination();
@@ -178,15 +176,17 @@ include './config/autoload.php';
            
            <main class="grid" >
                 <?php foreach ($info as $key => $value) { ?> 
-                <article > 
+                <article >
+                    <a href="./selected_destination.php?dest=<?=$value?>">
                 <?php
             $imgLocation = new Destinationdetail($value);
             $imageFind = $imgLocation -> getImage();
-            ?><img src=<?=$imageFind['img']?> alt="" >
+            ?><div class="imgBox"><img class="gridimgage"src=<?=$imageFind['img']?> alt="" ></div>
 
                     <div class="text">
-                        <h3 href=<?=$value?>><?=$value?></h3>
+                        <h3><?=$value?></h3>
                     </div>
+                    </a>
                 </article>
                     <?php
                         } ?> 

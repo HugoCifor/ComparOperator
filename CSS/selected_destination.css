@@ -21,16 +21,17 @@
     margin-top: 5%;
 }
 
-
-.TOtoDest{
+.allTO{
+    border: 1px black solid;
     display: flex;
     flex-direction: row;
-
 }
 
 .TONotes{ 
+
     margin-left: 15px;
     display: flex;
+    flex-direction: row;
 
  
 }
@@ -52,7 +53,8 @@
 
 .stars{
     width :100px;
-    
+    display: flex;
+    flex-direction: row;
 
 }
 .note{
