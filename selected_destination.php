@@ -19,7 +19,7 @@ if (isset($_GET['dest']) && in_array($_GET['dest'],$control)) {?>
      <title>Destinations</title>
  </head>
  <body id="body">
- <nav id="navbar"class="flex flex-row items-center img-fluid">
+ <nav id="navbar"class="flex flex-row items-center img-fluid ">
         <img id="logo1" src="./images/logo1.png" class="img-fluid " >
    </nav>  
         <h1 id="titledestination" class="img-fluid text-gray-800 text-center text-5xl italic"><?=$_GET['dest']?></h1><br><br><br><br><br><br>
@@ -147,3 +147,4 @@ if (isset($_GET['dest']) && in_array($_GET['dest'],$control)) {?>
 }else{
     header('location:./index.php');
 }
+
