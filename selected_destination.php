@@ -15,10 +15,10 @@ include './config/autoload.php';
  </head>
  <body id="body">
  <nav id="navbar"class="flex flex-row items-center img-fluid ">
-        <img id="logo1" src="./images/logo1.png" class="img-fluid " >
-        <img id="logo2" src="./images/logo2.png"class="img-fluid " >
+        <img id="logo3" src="./images/logo3.png" class="img-fluid " >
+        <img id="logo4" src="./images/logo4.png"class="img-fluid " >
    </nav>  
-        <h1 id="titledestination" class="img-fluid text-gray-800 text-center text-5xl italic"><?=$_GET['dest']?></h1><br><br><br><br><br><br>
+        <h1 id="titledestination" class="img-fluid text-blue-900 text-center text-6xl italic"><br><?=$_GET['dest']?></h1><br><br><br><br>
         <div id="dest" class="img-fluid">
 
             <?php
@@ -26,7 +26,7 @@ include './config/autoload.php';
             $TOs = $manager->getTONamesByDest($_GET['dest']);
             ?>
 
-            <table class="table img-fluid w-50 h-50 bg-white">
+            <table class="table img-fluid w-50 h-50 bg-blue-100">
                 <thead class="img-fluid">
                     <h3> 
                         <?php
@@ -34,22 +34,29 @@ include './config/autoload.php';
                         $TOs = $manager->getTONamesByDest($_GET['dest']);
                         ?>
                     </h3>
-                    <tr class="img-fluid">
+                    <tr class="img-fluid ">
                         <th scope="col">Opérateur</th>
                         <th scope="col">Prix</th>
                         <th scope="col">Notes</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- <?php foreach ($TOs as $TO) { ?>
-                        <tr>
-                            <th scope="row"><?= $listTO['id'] ?></th>
-                            <td><?= $listTO['grade'] ?></td>
-                            <td><?= $listTO['price'] ?></td>
-                            <td><?= $listTO['comments'] ?></td>
-                        
+                   
+                <?php foreach ($TOs as $key => $value) {
+                    $set= new Manager();
+                    $donnee = $set-> prepDataForTO($value);
+                    $premium = new TourOperator($donnee);
+                    $result = $premium->getPremium();
+                    
+                    if ($result==1) {
+                        ?><tr>
+                            
+                            <th class="TO"><a href=<?=$donnee['link']?>><?=$donnee['name']?></a></th><?php 
+                    }else{
+                        ?><th class="TO"><?=$value?></th> <?php
+                    }       
+                }?>  
                         </tr>
-                    <?php } ?> -->
                 </tbody>
             </table>
         </div>
@@ -126,7 +133,7 @@ include './config/autoload.php';
     <main>
         <h1 class="text-center">Nos tours-opérateurs</h1>
         <section>
-            <table class="table bg-white">
+            <table class="table bg-blue-100">
                 <thead>
                     <tr>
                         <th scope="col">Nom</th>
@@ -147,7 +154,7 @@ include './config/autoload.php';
             </table>
         </section>
     </main>
-<footer id="footer" class="align-content text-white text-center font-medium p-10">
+<footer id="footer" class="align-content bg-blue-100 text-blue-900 text-center font-medium p-10">
     <div class="flex flex-row ">
         <a href="#top"><img id="butTop" class="w-12 " src="./images/Capture.PNG" alt="Retour en haut"></a>
     </div>

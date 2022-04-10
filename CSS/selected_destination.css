@@ -1,26 +1,25 @@
 #body{
-    background-color: rgba(22, 145, 197);
-    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    height: 200vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-#logo1{
-    margin-top: 20vw;
-    margin-left: 10vw;
 
-}
-#logo2{
-    margin-top: 30vw;
+#logo4{
+    margin-top: 10vw;
     margin-left: 31vw;
 }
-#navbar,#chooseDestination{
-    height: 10vw;
-}
-.nomDeDestination{
-    margin-top: 5%;
+
+#logo3{
+    margin-top: 10vw;
+    margin-left: 10vw;
 }
 
+#navbar,#chooseDestination{
+    background-color: rgb(255, 255, 255);
+    height: 10vw;
+}
 
 .TOtoDest{
     display: flex;
@@ -58,24 +57,10 @@
 .note{
     margin-left: 10px;
 }
-/* test */
-#body{
-    background-color: rgba(22, 145, 197);
-    height: 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-#logo1{
-    margin-top: 10vw;
-    margin-left: 10vw;
-}
 
 
 footer{
     background-position: center;
-    background-color:rgba(22, 145, 197);
 }
   #butTop{
     overflow: hidden;
