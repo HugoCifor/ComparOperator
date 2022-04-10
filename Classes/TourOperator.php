@@ -101,6 +101,15 @@ class TourOperator
         $upd->execute([$this->isPremium]);
     }
 
+    function updateReview($grade_count,$grade_total,$score,$id)
+    {
+        $newGrade_count=$grade_count + 1;
+        $newGrade_total=$grade_total + $score;
+
+        $req = $this->db->getPDO()->prepare('UPDATE tour_operator SET grade_count =?, grade_total =? WHERE id = ?');
+        $req ->execute([$newGrade_count,$newGrade_total,$id]);
+    }
+
 
 
 }

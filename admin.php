@@ -82,22 +82,25 @@ include './config/autoload.php';
     <section>
         <div class="box-container">
             <div class="box">
-                <div class="info">
-                    <div class="SetPremium">
-                        <h2 class="text-white text-center">Gestion des premiums</h2><br><br>
-                        <form action="" method="post">
-                            <label class="text-xl text-white">selectionner le tour-opérateur</label>
-                            <select name="TOname" id="TOPremium" class="TO rounded">
-                                <?php foreach ($listTO as $key => $value) { ?> 
-                                    <option href=<?=$value?> ><?=$value?> </option> <?php
-                                } ?> 
-                            </select><br>
-                            <label class="text-xl text-white">le tour-opérateur est-il premium?</label>
-                            <input type="checkbox" name="TOPremium" id="TOPremium" class="rounded"><br>
-                            <div class="btn">
-                                <button id="btn" type="submit" class="text-xl text">valider</button>
-                            </div>
-                        </form>
+
+                    <div class="info">
+                        <div class="SetPremium">
+                            <h2 class="text-white text-center">Gestion des premiums</h2><br><br>
+                            <form action="./process/updatePremium.php" method="post">
+                                <label class="text-xl text-white">selectionner le tour-opérateur</label>
+                                <select name="TOname" id="TOPremium" class="TO rounded">
+                                    <?php foreach ($listTO as $key => $value) { ?> 
+                                        <option href=<?=$value?> ><?=$value?> </option> <?php
+                                    } ?> 
+                                </select><br>
+                                <label class="text-xl text-white">le tour-opérateur est-il premium?</label>
+                                <input type="checkbox" name="TOPremium" id="TOPremium" class="rounded"><br>
+                                <div class="btn">
+                                    <button id="btn" type="submit" class="text-xl text">valider</button>
+                                </div>
+                            </form>
+                        </div>
+
                     </div>
                 </div>
             </div>
