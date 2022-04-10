@@ -1,45 +1,33 @@
 #body{
-    background-color: #ffffff;
+    background-color: rgba(22, 145, 197);
+    height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
 }
-#navbar{
-    background-color: #ffffff;
 
-}
-#logo3{
-    background-color: #ffffff;
-
+#logo1{
     margin-top: 20vw;
     margin-left: 10vw;
 
 }
-#logo4{
-    background-color: #ffffff;
-
+#logo2{
     margin-top: 30vw;
     margin-left: 31vw;
 }
 #navbar,#chooseDestination{
-    background-color: #ffffff;
-
     height: 3vw;
 }
 select{
-    border: thick double #32a1ce;
+    
     background-color:white;
-    box-shadow: 0 4px 15px 0 #32a1ce;
+    box-shadow: 0 4px 15px 0 rgb(255, 255, 255);
 }
 #chooseDestination{
     margin-top: 0vw;
     margin-left: 68vw;
 }
-#btnNav{
-    border: thick double #32a1ce;
 
-}
 #btnNav:hover{
 	background-image: linear-gradient(to right, #2b99e7, rgba(255, 255, 255, 0), #ffffff00, #2b99e7);
 	box-shadow: 0 5px 18px 0 rgb(255, 255, 255);
@@ -48,7 +36,6 @@ select{
 
 
 #sliderSettings{
-    background-color: #2b99e7;
     background-size: cover;
     background-position: center;
 }
@@ -254,7 +241,10 @@ select{
 #slider-width, #slider-height {
   text-align: center;
 }
-
+footer #footer{
+    margin-bottom: 0px;
+    margin-top: 90px;
+}
 
 
   
@@ -388,29 +378,62 @@ select{
   }
 
   .grid {
+     padding-top: 40px;
+     padding-bottom: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    grid-gap: 20px;
+    grid-gap: 50px;
     align-items: stretch;
     margin-bottom: 30%;
+
   }
   
   .grid > article {
-    border: 1px solid #ccc;
+      height: 250px;
     box-shadow: 2px 2px 6px 0px rgba(22, 145, 197);
+    
   }
   
   .grid > article img {
-    max-width: 100%;
+    min-height: 100%;
+    min-width: 100%;
+    object-fit:cover;
+    transition: all 1s;
+  }
+
+  .grid > article:hover img{
+    transform:scale(1.2);  
+  }
+  .grid > article:hover .text{
+    transform:scale(1.2);  
   }
   
   .grid .text {
-    padding: 20px;
+      padding-top: 10px;
+    text-align: center;
+    transition: all 1s;
+    text-decoration: none;
+    color: black;
+
+  }
+    .grid .text {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+        
+  }
+
+  .imgBox{
+      height: 80%;
+    overflow: hidden;
+
   }
   
   
   footer{
-      height: 8vw;
+      height: -8vw;
       background-position: center;
       background-color:rgba(22, 145, 197);
   }
@@ -420,7 +443,8 @@ select{
     bottom:  0;
     right: 0;
     justify-content:end;
-    margin-block: 10px;
     position: fixed;
 }
+
+
 

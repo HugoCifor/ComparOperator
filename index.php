@@ -20,7 +20,8 @@ include './config/autoload.php';
         $info = $classe ->getDestinationNames();
         ?> 
     <nav id="navbar"class="flex flex-row items-center ">
-        <img id="logo3" src="./images/logo3.png" class=" " >
+
+    <img id="logo3" src="./images/logo3.png" class=" " >
         <img id="logo4" src="./images/logo4.png" >
     </nav>
     <section id="chooseDestination" class="text-center ">
@@ -74,7 +75,9 @@ include './config/autoload.php';
             Notre sélection du moment pour vous ... 
     </section>
 <main>
-    <?php include('./utilities/cardsdisplaying.php') ; ?>
+    <?php include('./utilities/cardsdisplaying.php') ; ////// selection des cartes non automatisé?>
+
+
     <section >
         <div id="card" style="background-image: url(https://www.alibabuy.com/photos/library/1500/11411.jpg);">          
         <div class="box-container">
@@ -174,9 +177,7 @@ include './config/autoload.php';
     <section>
         <div id="allDestination" class="bg-white">          
         <!-- <div class="allDestination">
-        <?php foreach ($info as $key => $newdest) { ?> 
-                            <div href=<?=$newdest?> ><?=$newdest?> </div> <?php
-                        } ?>  
+
             <?php 
             $newdest=new Manager();
             $destination = $newdest->getAllDestination();
@@ -185,17 +186,19 @@ include './config/autoload.php';
        <div class="containerGrid bg-white">
            
            <main class="grid" >
-           <?php foreach ($info as $key => $value) { ?> 
-                <article > 
+
+                <?php foreach ($info as $key => $value) { ?> 
+                <article >
+                    <a href="./selected_destination.php?dest=<?=$value?>">
                 <?php
             $imgLocation = new Destinationdetail($value);
             $imageFind = $imgLocation -> getImage();
-            ?><img  src=<?=$imageFind['img']?> alt="" >
-
+            ?><div class="imgBox"><img class="gridimgage"src=<?=$imageFind['img']?> alt="" ></div>
                     <div class="text">
-                        <h3 href=<?=$value?>><?=$value?></h3>
+                        <h3><?=$value?></h3>
                     </div>
-                   
+                    </a>
+
                 </article>
                     <?php     } ?> 
             </main>
