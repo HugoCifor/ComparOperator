@@ -1,5 +1,5 @@
 html {
-    font-size: 62.5%;
+    font-size: 70%;
 }
 
 section {
@@ -12,10 +12,7 @@ section {
     background-color: #fff;
     border-radius: 5px;
 }
-#logo1{
-    padding: 1rem 5%;
 
-}
 body{
 
     background-position: center;
@@ -25,7 +22,6 @@ body{
     background-image: url(https://sacavoyage.fr/wp-content/uploads/AAAAAAA.jpg);
 }
 .box-container {
-    
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap: 3rem;
@@ -56,4 +52,13 @@ body{
 .box-container .box .btn a:hover {
     color: black;
     background-color: #fff;
+}
+
+footer{
+    background-position: center;
+    height: 30%;
+}
+#logo1{
+    padding:  5%;
+    margin-left: 35%;
 }
