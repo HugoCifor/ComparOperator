@@ -88,7 +88,7 @@ include './config/autoload.php';
                     <div class="info">
                         <div class="SetPremium">
                             <h2 class="text-white text-center">Gestion des premiums</h2><br><br>
-                            <form action="" method="post">
+                            <form action="./process/updatePremium.php" method="post">
                                 <label class="text-xl text-white">selectionner le tour-opérateur</label>
                                 <select name="TOname" id="TOPremium" class="TO rounded">
                                     <?php foreach ($listTO as $key => $value) { ?> 

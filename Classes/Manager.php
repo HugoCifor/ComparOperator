@@ -168,6 +168,15 @@ class Manager
 
     }
 
+    function getOperatorIdByName($toName)
+    {
+        $req=$this->db->getPDO()->prepare('SELECT id FROM tour_operator WHERE name  = ?' );
+        $req -> execute([$toName]);
+        $result=$req->fetch();
+        return $result;
+
+    }
+
     function prepDataForDest($name,$TOid) // passer le TO depuis la db dans la classe TO
     {   
         

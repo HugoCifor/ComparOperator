@@ -35,7 +35,7 @@ if (isset($_GET['dest']) && in_array($_GET['dest'],$control)) {?>
             <div class="TOResult">
                 <?php
                 $TOsNames = $manager->getTONamesByDest($_GET['dest']); 
-                
+
                 foreach ($TOsNames as $key => $value) {
                     ?>
                     <div class="allTO"> <?php
@@ -75,7 +75,7 @@ if (isset($_GET['dest']) && in_array($_GET['dest'],$control)) {?>
                                         }
                                     }
 
-                                    for ($i=0; $i <5-$result; $i++) { 
+                                    for ($i=0; $i <5-ceil($result); $i++) { 
                                         ?><img class="star"  src="./images/star-line-yellow-1.webp" alt="" srcset=""><?php
                                     }?>
 
@@ -118,6 +118,7 @@ if (isset($_GET['dest']) && in_array($_GET['dest'],$control)) {?>
                        echo($value.' : ');
                     }   
                 }
+
                 foreach ($donneeReview as $key => $valueTO) {
                     $newreview = new Review($valueTO);
                     ?>
@@ -140,10 +141,21 @@ if (isset($_GET['dest']) && in_array($_GET['dest'],$control)) {?>
             
         </div>
         <div class="newReview">
-            <form action="" method="post">
-                <input class='author' type="text" name="" id="author" placeholder="votre nom">
-                <textarea name="message" id="message" cols="30" rows="10" placeholder="votre message..."></textarea>
-              
+            <form action="./process/addReview.php" method="post">
+                <input class='author' type="text" name="author" id="author" placeholder="votre nom">
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="votre message..."></textarea> 
+                <select id="select" name="TO" size="1" class="TOForm">
+                        <?php foreach ($TOsNames as $key => $value) { ?> 
+                            <option href=<?=$value?> ><?=$value?> </option> <?php
+                        } ?>  
+                </select><br>
+                <label>note</label>
+                <select id="select" name="score" size="1" class="TOForm">
+                    <?php for ($i=1; $i <6 ; $i++) { ?>
+                        <option href=<?=$i?> ><?=$i?> </option> <?php
+                    }?>
+                </select><br>
+                <input type="submit" value="envoyer">
             </form>
 
             
