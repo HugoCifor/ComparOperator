@@ -16,89 +16,86 @@
     margin-left: 10vw;
 }
 
-<<<<<<< HEAD
 #navbar,#chooseDestination{
     background-color: rgb(255, 255, 255);
     height: 10vw;
 }
 
-.TOtoDest{
-=======
-.NoteImageRevue{
->>>>>>> e776a056d768878513e97a5e97ed7d9ba9571125
+#returnHome{
+    margin-left:70%;
+}
+
+ .NoteImageRevue{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
+
 .LocImg{
     width: 100%;
 }
+
 .imgLocation{
     width: 45%;
-} 
-.TOtoDest{
+}  
+
+/* .TOtoDest{
     width: 45%;
     height: 50%;
-}
-.revue{
+} */
+
+/* .revue{
     position:relative;
+} */
 
-}
-
-.allTO{
+/* .allTO{
     width: 70%;
     border: 1px black solid;
     display: flex;
     flex-direction: row;
-}
-.TO{
+} */
+
+/* .TO{
     width: 33%;
     text-align: center;
+} */
 
-}
-.price{
+/* .price{
     width: 33%;
 }
 
 .TONotes{ 
-
     margin-left: 15px;
     display: flex;
     flex-direction: row;
-
- 
 }
+
 .TONotes{
     display: flex;
     flex-direction: column;
     width: 33%;
 
-}
-.notesStars{
+} */
+ .notesStars{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-
     
 }
 .star{
-    height: 15px;
-    margin-top: 5%;
+    margin-top: 2%;
 }
 
 .stars{
-    width :100%;
+    width :50%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
 
 }
 .comments{
     margin-bottom: 10px;
 }
-<<<<<<< HEAD
-=======
 .author{
     margin-left: 15px;
     margin-right: 5px;
@@ -113,23 +110,7 @@
 }
 .revue{
     border: pink 2px solid;
-}
-
-/* test */
-#body{
-    background-color: rgba(22, 145, 197);
-    height: 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-#logo1{
-    margin-top: 10vw;
-    margin-left: 10vw;
-}
->>>>>>> e776a056d768878513e97a5e97ed7d9ba9571125
-
+} */
 
 footer{
     background-position: center;

@@ -54,11 +54,16 @@ body{
     background-color: #fff;
 }
 
+#returnHome{
+    padding:  5%;
+    margin-left: 35%;
+}
+
 footer{
     background-position: center;
     height: 30%;
 }
 #logo1{
     padding:  5%;
-    margin-left: 35%;
+    margin-left: 30%;
 }
