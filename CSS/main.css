@@ -1,17 +1,17 @@
 #body{
-    background-color: rgba(22, 145, 197);
-    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    height: 200vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-#logo1{
-    margin-top: 20vw;
+#logo3{
+    margin-top: 15vw;
     margin-left: 10vw;
 
 }
-#logo2{
+#logo4{
     margin-top: 30vw;
     margin-left: 31vw;
 }
@@ -19,13 +19,17 @@
     height: 3vw;
 }
 select{
-    
+    border: thick double #32a1ce;
     background-color:white;
     box-shadow: 0 4px 15px 0 rgb(255, 255, 255);
 }
 #chooseDestination{
     margin-top: 0vw;
     margin-left: 68vw;
+}
+
+#btnNav{
+    border: thick double #32a1ce;
 }
 
 #btnNav:hover{
@@ -241,13 +245,7 @@ select{
 #slider-width, #slider-height {
   text-align: center;
 }
-footer #footer{
-    margin-bottom: 0px;
-    margin-top: 90px;
-}
 
-
-  
   .box-container {
     align-items: center;
     display: flex;
@@ -431,7 +429,7 @@ footer #footer{
 
   }
   
-  
+
   footer{
       height: -8vw;
       background-position: center;

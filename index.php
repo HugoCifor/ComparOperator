@@ -20,8 +20,7 @@ include './config/autoload.php';
         $info = $classe ->getDestinationNames();
         ?> 
     <nav id="navbar"class="flex flex-row items-center ">
-
-    <img id="logo3" src="./images/logo3.png" class=" " >
+        <img id="logo3" src="./images/logo3.png" class=" " >
         <img id="logo4" src="./images/logo4.png" >
     </nav>
     <section id="chooseDestination" class="text-center ">
@@ -44,8 +43,8 @@ include './config/autoload.php';
                 <ol id="slider-container"class="slider-container" dir="ltr">
                     <li id="slide_1" class="li_slide">
                         <div class="slide-snapper"></div>
-                        <a class="prev_slide" href="#slide_1" src=""></a> 
-                        <a class="next_slide" href="#slide_2" src=""></a> 
+                        <a class="prev_slide" href="#slide_1" ></a> 
+                        <a class="next_slide" href="#slide_2" ></a> 
                     </li>
                     <li id="slide_2" class="li_slide">
                         <div class="slide-snapper"></div>

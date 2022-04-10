@@ -1,93 +1,96 @@
 #body{
-    background-color: rgba(22, 145, 197);
-    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    height: 200vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-#logo1{
-    margin-top: 20vw;
-    margin-left: 10vw;
 
-}
-#logo2{
-    margin-top: 30vw;
+#logo4{
+    margin-top: 10vw;
     margin-left: 31vw;
 }
-#navbar,#chooseDestination{
-    height: 10vw;
-}
-.nomDeDestination{
-    margin-top: 5%;
+
+#logo3{
+    margin-top: 10vw;
+    margin-left: 10vw;
 }
 
-.NoteImageRevue{
+#navbar,#chooseDestination{
+    background-color: rgb(255, 255, 255);
+    height: 10vw;
+}
+
+#returnHome{
+    margin-left:70%;
+}
+
+ .NoteImageRevue{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
+
 .LocImg{
     width: 100%;
 }
+
 .imgLocation{
     width: 45%;
-} 
-.TOtoDest{
+}  
+
+/* .TOtoDest{
     width: 45%;
     height: 50%;
-}
-.revue{
+} */
+
+/* .revue{
     position:relative;
+} */
 
-}
-
-.allTO{
+/* .allTO{
     width: 70%;
     border: 1px black solid;
     display: flex;
     flex-direction: row;
-}
-.TO{
+} */
+
+/* .TO{
     width: 33%;
     text-align: center;
+} */
 
-}
-.price{
+/* .price{
     width: 33%;
 }
 
 .TONotes{ 
-
     margin-left: 15px;
     display: flex;
     flex-direction: row;
-
- 
 }
+
 .TONotes{
     display: flex;
     flex-direction: column;
     width: 33%;
 
-}
-.notesStars{
+} */
+ .notesStars{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-
     
 }
 .star{
-    height: 15px;
-    margin-top: 5%;
+    margin-top: 2%;
 }
 
 .stars{
-    width :100%;
+    width :50%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
 
 }
 .comments{
@@ -107,26 +110,10 @@
 }
 .revue{
     border: pink 2px solid;
-}
-
-/* test */
-#body{
-    background-color: rgba(22, 145, 197);
-    height: 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-#logo1{
-    margin-top: 10vw;
-    margin-left: 10vw;
-}
-
+} */
 
 footer{
     background-position: center;
-    background-color:rgba(22, 145, 197);
 }
   #butTop{
     overflow: hidden;
