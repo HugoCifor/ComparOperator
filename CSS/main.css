@@ -387,18 +387,20 @@ footer #footer{
     grid-gap: 50px;
     align-items: stretch;
     margin-bottom: 30%;
+
   }
   
   .grid > article {
       height: 250px;
     box-shadow: 2px 2px 6px 0px rgba(22, 145, 197);
+    
   }
   
   .grid > article img {
     min-height: 100%;
     min-width: 100%;
     object-fit:cover;
-    transition: all 0.2s;
+    transition: all 1s;
   }
 
   .grid > article:hover img{
@@ -411,7 +413,7 @@ footer #footer{
   .grid .text {
       padding-top: 10px;
     text-align: center;
-    transition: all 0.2s;
+    transition: all 1s;
     text-decoration: none;
     color: black;
 
@@ -420,7 +422,7 @@ footer #footer{
     text-align: center;
     text-decoration: none;
     color: black;
-
+        
   }
 
   .imgBox{
@@ -441,7 +443,6 @@ footer #footer{
     bottom:  0;
     right: 0;
     justify-content:end;
-    margin-block: 10px;
     position: fixed;
 }
 

@@ -21,10 +21,40 @@
     margin-top: 5%;
 }
 
+.NoteImageRevue{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.LocImg{
+    width: 100%;
+}
+.imgLocation{
+    width: 45%;
+} 
+.TOtoDest{
+    width: 45%;
+    height: 50%;
+}
+.revue{
+    position:relative;
+
+}
+
 .allTO{
+    width: 70%;
     border: 1px black solid;
     display: flex;
     flex-direction: row;
+}
+.TO{
+    width: 33%;
+    text-align: center;
+
+}
+.price{
+    width: 33%;
 }
 
 .TONotes{ 
@@ -38,28 +68,47 @@
 .TONotes{
     display: flex;
     flex-direction: column;
+    width: 33%;
 
 }
 .notesStars{
     display: flex;
     flex-direction: row;
-    border : 2px solid rgb(0, 255, 242);
+    justify-content: space-around;
 
     
 }
 .star{
     height: 15px;
+    margin-top: 5%;
 }
 
 .stars{
-    width :100px;
+    width :100%;
     display: flex;
     flex-direction: row;
+    justify-content: center;
 
 }
-.note{
-    margin-left: 10px;
+.comments{
+    margin-bottom: 10px;
 }
+.author{
+    margin-left: 15px;
+    margin-right: 5px;
+}
+
+.commentary{
+    display: flex;
+    flex-direction: row;
+}
+.note{
+    width: 100%;
+}
+.revue{
+    border: pink 2px solid;
+}
+
 /* test */
 #body{
     background-color: rgba(22, 145, 197);

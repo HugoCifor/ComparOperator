@@ -1,9 +1,12 @@
 <?php
+
+use LDAP\Result;
+
 include "./config/bdd.php";
 include './config/autoload.php';
 
-$classe = new Manager();
-$control = $classe ->getDestinationNames();
+$manager = new Manager();
+$control = $manager ->getDestinationNames();
 
 
 if (isset($_GET['dest']) && in_array($_GET['dest'],$control)) {?>
@@ -19,28 +22,24 @@ if (isset($_GET['dest']) && in_array($_GET['dest'],$control)) {?>
      <title>Destinations</title>
  </head>
  <body id="body">
- <nav id="navbar"class="flex flex-row items-center img-fluid">
-        <img id="logo1" src="./images/logo1.png" class="img-fluid " >
-   </nav>  
+     <nav id="navbar"class="flex flex-row items-center img-fluid">
+         <img id="logo1" src="./images/logo1.png" class="img-fluid " >
+        </nav>  
         <h1 id="titledestination" class="img-fluid text-gray-800 text-center text-5xl italic"><?=$_GET['dest']?></h1><br><br><br><br><br><br>
-        <div id="dest" class="img-fluid">
 
-            <?php
-            $manager = new Manager();
-            $TOs = $manager->getTONamesByDest($_GET['dest']);
-            ?>
 
-           
-        </div>
+            
+
+        <div class="NoteImageRevue">
         <div class="TOtoDest">
             <div class="TOResult">
-
-                <?php foreach ($TOs as $key => $value) {
+                <?php
+                $TOsNames = $manager->getTONamesByDest($_GET['dest']); 
+                
+                foreach ($TOsNames as $key => $value) {
                     ?>
                     <div class="allTO"> <?php
-
-                        $set= new Manager();
-                        $donneeTO = $set-> prepDataForTO($value);
+                        $donneeTO = $manager-> prepDataForTO($value);
                         $premium = new TourOperator($donneeTO);
                         $result = $premium->getPremium(); 
                         if ($result==1) {
@@ -51,9 +50,8 @@ if (isset($_GET['dest']) && in_array($_GET['dest'],$control)) {?>
 
                         <div class="TONotes">
                             <?php 
-                                $set= new Manager();
-                                $donneeTO = $set-> prepDataForTO($value);
-                                $donneeDEST = $set-> prepDataForDEST($_GET['dest'],$donneeTO['id']);
+                                $donneeTO = $manager-> prepDataForTO($value);
+                                $donneeDEST = $manager-> prepDataForDEST($_GET['dest'],$donneeTO['id']);
                     
                                 $newDest= new Destination($donneeDEST);
                                 $price = $newDest->getPrice();
@@ -86,13 +84,11 @@ if (isset($_GET['dest']) && in_array($_GET['dest'],$control)) {?>
                                 }else {?>
                                     <div class="note">pas encore noté</div> <?php
                                 }?>
-                                </div>
-                                   
-                            
+                                </div>           
                         </div>  
-                        <div class="prix">
-                                        <?=$price?>
-                                    </div>
+                        <div class="price">
+                            <?=$price?>
+                        </div>
                     </div><?php
                     
                 }?>  
@@ -102,18 +98,60 @@ if (isset($_GET['dest']) && in_array($_GET['dest'],$control)) {?>
         <?php
         $imgLocation = new Destinationdetail($_GET['dest']);
         $imageFind = $imgLocation -> getImage();
-         ?><img src=<?=$imageFind['img']?> alt="" class="img-fluid" >
+         ?><img class="LocImg" src=<?=$imageFind['img']?> alt="" class="img-fluid" >
     </div>
 
-    <div class="alreadyPostedReview">
-        <div class="author"></div>
-        <div class="message"></div>
+    
+    <div class="revue">
+        <div class="alreadyPostedReview">
+            <?php 
+            $donneeTO = $manager-> prepDataForTO($value);
+            $donneeReview = $manager->preparDataForReview($donneeTO['id']);
+            foreach ($TOsNames as $key => $value) {
+                ?><div class="comments"><?php
+                
+
+                $donneeTO = $manager-> prepDataForTO($value);
+                $donneeReview = $manager->preparDataForReview($donneeTO['id']);
+                foreach ($donneeReview as $key => $valueTO) {
+                    if ($key==0) {
+                       echo($value.' : ');
+                    }   
+                }
+                foreach ($donneeReview as $key => $valueTO) {
+                    $newreview = new Review($valueTO);
+                    ?>
+                        <div class="commentary">
+                            <div class="author">
+                                <?php echo($newreview->getAuthor()." : ");
+                                ?>
+                            </div> 
+                            <div class="message">
+                                <?php $test = $newreview->getMessage();
+                                echo($test);?>
+                            </div>
+                        </div><?php
+                  }?>
+                
+                </div><?php
+     
+            }
+        ?>
+            
+        </div>
+        <div class="newReview">
+            <form action="" method="post">
+                <input class='author' type="text" name="" id="author" placeholder="votre nom">
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="votre message..."></textarea>
+              
+            </form>
+
+            
+            <div class="newMessage"></div>
+        </div>
     </div>
-    <div class="newReview">
-        <div class="newAuthor"></div>
-        <div class="newMessage"></div>
-    </div>
-    <?php    //affichage form ajout com et note
+</div>
+    <?php   //affichage form ajout com et note
 
 
     ?>
@@ -144,6 +182,7 @@ if (isset($_GET['dest']) && in_array($_GET['dest'],$control)) {?>
      </body>
      </html>
     <?php
+                
 }else{
     header('location:./index.php');
 }

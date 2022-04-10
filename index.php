@@ -75,7 +75,9 @@ include './config/autoload.php';
             Notre sélection du moment pour vous ... 
     </section>
 <main>
-    <?php include('./utilities/cardsdisplaying.php') ; ?>
+    <?php include('./utilities/cardsdisplaying.php') ; ////// selection des cartes non automatisé?>
+
+
     <section >
         <div id="card" style="background-image: url(https://www.alibabuy.com/photos/library/1500/11411.jpg);">          
         <div class="box-container">
@@ -192,13 +194,9 @@ include './config/autoload.php';
             $imgLocation = new Destinationdetail($value);
             $imageFind = $imgLocation -> getImage();
             ?><div class="imgBox"><img class="gridimgage"src=<?=$imageFind['img']?> alt="" ></div>
-
-
                     <div class="text">
                         <h3><?=$value?></h3>
                     </div>
-
-                    
                     </a>
 
                 </article>

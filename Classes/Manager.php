@@ -215,6 +215,17 @@ class Manager
         
     }
 
+    
+
+    function preparDataForReview($TOid){
+        $req=$this->db->getPDO()->prepare('SELECT * FROM review WHERE  tour_operator_id='.$TOid );
+        $req->execute();
+        $fetched=$req->fetchAll();
+        
+        return $fetched;
+
+    }
+
 
 
 
