@@ -22,51 +22,77 @@
 }
 
 #returnHome{
+    margin-left: -40%;
     margin-left:70%;
 }
+.table{
+    margin-right:-25%;
+}
 
+.TOResult{
+    margin-left:-60%;
+    margin-right:-60%;
+    border: thick double #32a1ce;
+}
  .NoteImageRevue{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
+#inputComment{
+    border-color: black;
+}
 
+#inputComment:hover{
+    background-image: linear-gradient(to right, #2b99e7, rgba(255, 255, 255, 0), #ffffff00, #2b99e7);
+	box-shadow: 0 5px 18px 0 rgb(255, 255, 255);
+ color: rgb(39, 42, 44);
+}
 .LocImg{
-    width: 100%;
+    margin-top: 30%;
+    margin-right: 20%;
+    margin-left: -40%;
 }
 
 .imgLocation{
+    margin-left: -30%;
     width: 45%;
 }  
 
-/* .TOtoDest{
+.TOtoDest{
+    margin-left: 25%;
     width: 45%;
     height: 50%;
-} */
+} 
 
-/* .revue{
+.revue{
+    margin-top: 6%;
     position:relative;
-} */
+    width: 60%;
+    height: auto;
+}
 
-/* .allTO{
-    width: 70%;
-    border: 1px black solid;
+.allTO{
+    width: 100%;
+    border: 1px rgb(35, 166, 223) solid;
     display: flex;
     flex-direction: row;
-} */
+    height:auto;
+}
 
-/* .TO{
-    width: 33%;
-    text-align: center;
-} */
+.TO{
+    width: 50%;
+    margin-left: 2%;
+}
 
-/* .price{
+.price{
+    margin-right: -70px;
     width: 33%;
 }
 
 .TONotes{ 
-    margin-left: 15px;
+    margin-right: 90px;
     display: flex;
     flex-direction: row;
 }
@@ -76,41 +102,44 @@
     flex-direction: column;
     width: 33%;
 
-} */
+} 
  .notesStars{
+     width: 40%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     
-}
-.star{
+} 
+ .star{
     margin-top: 2%;
 }
 
 .stars{
-    width :50%;
+    width :15%;
     display: flex;
     flex-direction: row;
 
 }
-.comments{
+ .comments{
     margin-bottom: 10px;
-}
-.author{
+} 
+ .author{
     margin-left: 15px;
     margin-right: 5px;
-}
+} 
 
-.commentary{
+ .commentary{
     display: flex;
     flex-direction: row;
-}
+} 
 .note{
-    width: 100%;
+    margin-left: 70%;
 }
-.revue{
-    border: pink 2px solid;
-} */
+
+ .revue{
+    border: thick double #32a1ce;
+
+}  
 
 footer{
     background-position: center;
